@@ -234,7 +234,8 @@ The built-in icons below carry the original project's CC BY attributions. The ad
 * This mod is inspired from concepts of [Kempeth's AutoMapPins](https://github.com/Kempeth/AutoMapPins) provided via
   LGPLv3, but I did re-write most of the code from scratch to make the mod configurable, simplified a lot of the
   concepts.
-* [Mod icon](https://www.flaticon.com/free-icons/radar)
+* Mod logo: recreated from the maintainer's supplied map-and-location-pin reference, using CraftSort's dark brown and golden yellow palette. High-resolution master is in `Icons/Branding`.
+* Original embedded AMP/radar artwork: [radar icon](https://www.flaticon.com/free-icons/radar).
 * [Axe by Danil Polshin](https://thenounproject.com/browse/icons/term/axe/) (CCBY) - modified
 * [cave dungeon by Amanda Hua](https://thenounproject.com/browse/icons/term/cave-dungeon/) (CCBY) - modified
 * [Flower by Vectors Market](https://thenounproject.com/browse/icons/term/flower/) (CCBY) - modified

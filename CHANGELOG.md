@@ -2,6 +2,8 @@
 
 ## 2.3.17 — unreleased candidate
 
+- Replace the package logo with the supplied map-and-location-pin design in CraftSort's brown/yellow palette; retain a high-resolution master.
+
 - Fix icon hot reload so one unreadable PNG does not block other icons. The affected entry retains its own last working image until its file is readable again.
 - Resolve fallback aliases against the current icon set during partial reloads.
 - Add GitHub Issues forms for bugs, questions, and features; source CI and build/release documentation.
