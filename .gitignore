@@ -7,7 +7,6 @@ obj
 *.zip
 ThunderStorePackage/plugins/*.dll
 ThunderStorePackage/CHANGELOG.md
-ThunderStorePackage/README.md
 packages/*
 TempPackage/
 Thunderstore/

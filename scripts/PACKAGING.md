@@ -14,9 +14,11 @@ To package an already merged DLL without rebuilding:
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/New-ThunderstorePackage.ps1 -DllPath "<merged DLL>" -OutputZip "<new archive path>"
 ```
 
-The output parent must exist for direct script invocation. The project target creates `PackageOutputDir` when needed. Package sources are README, changelog, license, manifest, icon, the merged DLL, and the `ThunderStorePackage/config` and `ThunderStorePackage/plugins` trees. Relative paths are preserved. The legacy root `categories.vanilla.yaml` template remains excluded. Linked payload files/directories and duplicate case-insensitive destinations are rejected. Existing `TempPackage` content is neither read nor deleted.
+The output parent must exist for direct script invocation. The project target creates `PackageOutputDir` when needed. The package's root `README.md` comes only from the tracked **`ThunderStorePackage/README.md`**, the short mod-site overview. The repository-root `README.md` is the extended GitHub guide and is not included in the mod ZIP. A missing site README fails before archive creation; there is no fallback to the GitHub guide. Edit the two source files for their respective audiences.
 
-Regression tests use fixture files and the real assembly identity of the supplied DLL. They exercise the production script, not a duplicated implementation:
+Other package sources are the root changelog and license, manifest, icon, the merged DLL, and the `ThunderStorePackage/config` and `ThunderStorePackage/plugins` trees. Relative paths are preserved. The legacy root `categories.vanilla.yaml` template remains excluded. Linked payload files/directories and duplicate case-insensitive destinations are rejected. Existing `TempPackage` content is neither read nor deleted.
+
+Regression tests use fixture files and the real assembly identity of the supplied DLL. They exercise the production script, including distinct GitHub/site texts, package stability after a GitHub-only edit, and rejection of a missing site README:
 
 ```powershell
 python scripts/Test-ThunderstorePackage.py --dll "<merged DLL>"

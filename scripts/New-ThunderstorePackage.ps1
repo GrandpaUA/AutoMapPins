@@ -31,7 +31,13 @@ function Add-Payload([string]$source, [string]$entry) {
     if ($files.ContainsKey($entry)) { throw "Duplicate package destination: $entry" }
     $files[$entry] = $item.FullName
 }
-foreach ($name in @('README.md','CHANGELOG.md','LICENSE')) {
+# The site overview is maintained separately from the extended GitHub README.
+$siteReadme = Join-Path $root 'ThunderStorePackage/README.md'
+if (!(Test-Path -LiteralPath $siteReadme -PathType Leaf)) {
+    throw "Thunderstore README not found: $siteReadme"
+}
+Add-Payload $siteReadme 'README.md'
+foreach ($name in @('CHANGELOG.md','LICENSE')) {
     Add-Payload (Join-Path $root $name) $name
 }
 Add-Payload $manifestPath 'manifest.json'

@@ -24,7 +24,9 @@ def fixture(name, version=args.version, duplicate=False):
     package = base / 'ThunderStorePackage'
     package.mkdir(parents=True)
     for path, content in {
-        'README.md': b'readme', 'CHANGELOG.md': b'changes', 'LICENSE': b'license',
+        'README.md': b'Extended GitHub documentation: must not appear on the mod site',
+        'ThunderStorePackage/README.md': b'Short Thunderstore overview',
+        'CHANGELOG.md': b'changes', 'LICENSE': b'license',
         'ThunderStorePackage/icon.png': b'fixture icon',
         'ThunderStorePackage/config/a/icon.png': b'FIRST',
         'ThunderStorePackage/config/b/icon.png': b'SECOND',
@@ -67,6 +69,8 @@ with zipfile.ZipFile(out) as archive:
     assert archive.read('config/a/icon.png') == b'FIRST'
     assert archive.read('config/b/icon.png') == b'SECOND'
     assert archive.read('plugins/AutoMapPins.dll') == dll.read_bytes()
+    assert archive.read('README.md') == (base / 'ThunderStorePackage/README.md').read_bytes()
+    assert archive.read('README.md') != (base / 'README.md').read_bytes()
     assert len(names) == 9, names
     assert not any('stale' in n or 'vanilla' in n for n in names), names
 assert snapshot(base) == before
@@ -81,6 +85,24 @@ code, log = run(base, second)
 assert code == 0, log
 assert second.read_bytes() == original
 print('PASS byte-reproducible repeated package')
+github_changed = fixture('github-readme-changed')
+(github_changed / 'README.md').write_bytes(b'Different extended GitHub-only guide')
+prior = snapshot(github_changed)
+unchanged_site = work / 'github-readme-changed.zip'
+code, log = run(github_changed, unchanged_site)
+assert code == 0, log
+assert unchanged_site.read_bytes() == original
+assert snapshot(github_changed) == prior
+print('PASS GitHub-only README changes do not change the mod package')
+missing_site = fixture('missing-site-readme')
+(missing_site / 'ThunderStorePackage/README.md').unlink()
+prior = snapshot(missing_site)
+missing_target = work / 'missing-site-readme.zip'
+code, log = run(missing_site, missing_target)
+assert code != 0 and 'Thunderstore README not found' in log, log
+assert not missing_target.exists()
+assert snapshot(missing_site) == prior
+print('PASS missing site README rejected without falling back to GitHub documentation')
 for name, version, duplicate, expected in [
     ('version-mismatch', '99.0.0', False, 'version mismatch'),
     ('collision', args.version, True, 'Duplicate package destination'),
