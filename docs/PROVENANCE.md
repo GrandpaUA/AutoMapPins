@@ -7,7 +7,7 @@ AutoMapPins is a maintained continuation by [GrandpaUA](https://github.com/Grand
 - Code license: the original LGPLv3 text is retained in `LICENSE`, with its incorporated GPL text in packaged notices.
 - ServerSync: vendored dependency with a narrow local compatibility patch. See [patch provenance](../libraries/ServerSync.compatibility.md) and the packaged third-party notices; exact upstream source-to-binary correspondence remains unverified.
 - YamlDotNet 15.1.4: restored from the pinned dependency package and merged at build time; the MIT notice is retained in packaged notices.
-- Built-in artwork: original author credits are retained in README.
+- Built-in artwork: the complete original author credits are retained in [CREDITS.md](../ThunderStorePackage/plugins/AutoMapPins/licenses/CREDITS.md), included with every package; README links to them.
 - Package logo: generated from the maintainer's supplied location-pin/map reference and CraftSort palette. The master and export notes are in `Icons/Branding`; embedded map-pin artwork is unchanged.
 - Additional Cartur PNGs: supplied with the contributed configuration from BioHazardN7. The contributor reported obtaining permission and the maintainer confirmed inclusion. See [Cartur's source](https://github.com/jekkle/cartur-map-pins) and [artwork notice](../ThunderStorePackage/plugins/AutoMapPins/licenses/THIRD-PARTY.md). No code license is assigned to these images.
 

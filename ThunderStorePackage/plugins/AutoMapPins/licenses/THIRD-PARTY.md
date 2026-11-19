@@ -15,7 +15,7 @@ Exact ServerSync source revision/build correspondence remains unverified. The up
 
 ## Artwork
 
-Embedded artwork credits are in the packaged README.
+Embedded artwork credits are retained in the accompanying [CREDITS.md](CREDITS.md). The package README also identifies the original mod authors, BioHazardN7, and Cartur.
 
 The additional PNGs under `config/AutoMapPins/CartursIconsPack/` are by **Cartur**, from [Cartur's Map Pins](https://thunderstore.io/c/valheim/p/Cartur/Carturs_Map_Pins/) ([source](https://github.com/jekkle/cartur-map-pins), [contributor's project link](https://valheim.hexium.gg/mods/Cartur/Carturs_Map_Pins)). BioHazardN7 supplied the configuration and reported obtaining the author's permission; the maintainer confirmed inclusion of the supplied artwork. This records the basis on which the files were supplied, rather than independent verification of a permission exchange.
 

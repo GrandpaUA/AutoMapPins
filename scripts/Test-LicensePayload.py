@@ -8,7 +8,7 @@ import sys
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-NOTICES = ('GPL-3.0.txt', 'YamlDotNet.txt', 'ServerSync-upstream.txt', 'THIRD-PARTY.md')
+NOTICES = ('GPL-3.0.txt', 'YamlDotNet.txt', 'ServerSync-upstream.txt', 'THIRD-PARTY.md', 'CREDITS.md')
 PREFIX = 'plugins/AutoMapPins/licenses/'
 
 
@@ -54,7 +54,7 @@ def main():
         changed = dict(payload)
         changed[name] += b' altered'
         expect_failure(changed)
-    print('PASS: exact packaged notices; 5 missing and 5 modified negative controls; ZIP CRC')
+    print(f'PASS: exact packaged notices; {len(required)} missing and {len(required)} modified negative controls; ZIP CRC')
     print('ZIP SHA256:', hashlib.sha256(archive.read_bytes()).hexdigest())
 
 
