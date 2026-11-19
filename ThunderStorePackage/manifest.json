@@ -2,7 +2,7 @@
   "name": "AutoMapPins",
   "version_number": "2.3.17",
   "website_url": "https://github.com/GrandpaUA/AutoMapPins",
-  "description": "Maintained continuation of AutoMapPins for current Valheim versions. Originally created by FixItFelix.",
+  "description": "Automatically mark resources and locations on Valheim's map and minimap. Custom icons, category settings, temporary or saved pins.",
   "dependencies": [
     "denikson-BepInExPack_Valheim-5.4.2202"
   ]
