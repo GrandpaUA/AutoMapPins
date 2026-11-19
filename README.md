@@ -9,6 +9,12 @@ Maintained continuation of AutoMapPins by GrandpaUA, based on FixItFelix's origi
 This mod serves as a kind of "radar" for your Valheim map, automatically creating temporary and persistent pins for
 various in-game objects.
 
+## In-game preview
+
+![AutoMapPins in Valheim: custom chest and beehive icons, localized labels, and map pin icons](https://github.com/GrandpaUA/AutoMapPins/blob/main/docs/images/map-pins-in-game.png?raw=true)
+
+Custom icons on the explored map, with Ukrainian pin labels and the map's icon picker.
+
 ## Features
 
 * [Server Synced](https://github.com/blaxxun-boop/ServerSync)
