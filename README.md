@@ -68,6 +68,12 @@ Some of these categories are off by default. Objects from mods you do not have s
 
 Use [GitHub Issues](https://github.com/GrandpaUA/AutoMapPins/issues/new/choose) for all reports and questions. English and Ukrainian are welcome. For bugs, include your mod/game versions, reproduction steps, relevant config, and `BepInEx/LogOutput.log`.
 
+## Support development
+
+If the mod is useful to you, you can support its development:
+
+[![Ko-fi](https://storage.ko-fi.com/cdn/kofi3.png?v=6)](https://ko-fi.com/grandpa_ai)
+
 ## Credits
 
 - Original mod: [FixItFelix](https://github.com/FelixReuthlinger/AutoMapPins); compatibility work: [littlebeagle](https://github.com/littlebeagle/AutoMapPins).

@@ -68,6 +68,12 @@ AutoMapPins додає позначки родовищ руди, підземе�
 
 Залишай усі звернення в [GitHub Issues](https://github.com/GrandpaUA/AutoMapPins/issues/new/choose). Можна писати українською або англійською. Для багів додай версії мода й гри, кроки відтворення, відповідну конфігурацію та `BepInEx/LogOutput.log`.
 
+## Підтримати розробку
+
+Якщо мод став у пригоді, можеш підтримати його розвиток:
+
+[![Ko-fi](https://storage.ko-fi.com/cdn/kofi3.png?v=6)](https://ko-fi.com/grandpa_ai)
+
 ## Автори та подяки
 
 - Оригінальний мод — [FixItFelix](https://github.com/FelixReuthlinger/AutoMapPins); робота із сумісності — [littlebeagle](https://github.com/littlebeagle/AutoMapPins).
