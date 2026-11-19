@@ -1,0 +1,57 @@
+name: Bug report
+description: Report missing pins, incorrect icons, reload problems, or errors.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Search existing issues first. English and Ukrainian are welcome.
+        Report one problem per issue. Remove passwords, tokens, server addresses, and personal information from attachments.
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: AutoMapPins, Valheim, and BepInEx versions from your mod manager or startup log.
+      placeholder: "AutoMapPins: ...; Valheim: ...; BepInEx: ..."
+    validations:
+      required: true
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Where does it happen?
+      options:
+        - Single-player
+        - Hosted multiplayer
+        - Dedicated server
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+      description: Describe what should happen and what you actually see. Include the object or icon name if known.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Include whether it happens after editing YAML/PNG, after restarting, or after reconnecting.
+      placeholder: |
+        1. Start with ...
+        2. Change ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: configuration
+    attributes:
+      label: Configuration and other mods
+      description: Attach a ZIP of relevant AMP CFG/YAML/PNG files and a mod list or profile export. Say which mods affect maps, skills, or icons. Remove private information.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Logs and screenshots
+      description: Attach BepInEx/LogOutput.log from a session reproducing the problem and before/after screenshots when useful. State whether it also occurs with only AutoMapPins and BepInEx, if checked.

@@ -1,0 +1,29 @@
+# Optional AutoMapPins custom icon configuration.
+# Paths are relative to BepInEx/config and must point to PNG files.
+# size is the map icon percentage (100 = normal, 10 = 0.1x, allowed 1..300).
+# PNG and YAML updates reload icons after file writes settle; no game restart needed.
+# It does not change discovery radius or the PNG pixel dimensions.
+# Example:
+# icons:
+#   customOre:
+#     file: "AutoMapPins/icons/custom_ore.png"
+#     fallbackIcon: "mine"
+#     size: 150
+# vanillaOverrides:
+#   Icon0: # vanilla MAP pin type, not the AMP category name; None is excluded
+#     file: "AutoMapPins/icons/custom_fire.png"
+#     size: 150
+#   Vendor_BlackForest: # exact ZoneSystem location ID; replaces the game's location marker, not an AMP pin
+#     file: "AutoMapPins/icons/custom_trader.png"
+#     size: 125
+#   StartTemple: # other supported examples: Hildir_camp, BogWitch_Camp, AncientUpgradeStation
+#     file: "AutoMapPins/icons/custom_temple.png"
+#     size: 100
+# Legacy names like fire in vanillaOverrides continue to replace AMP icon names.
+# Location keys match the game's exact case-sensitive IDs; unknown IDs do nothing.
+# None is excluded because unrelated unsaved pins also use that type.
+# With a matching vanilla map pin-type key, the picker button image also changes;
+# its selection overlay and size do not. Location-ID keys do not affect the picker.
+# Discovery/category settings are not modified by this icon configuration.
+icons: {}
+vanillaOverrides: {}

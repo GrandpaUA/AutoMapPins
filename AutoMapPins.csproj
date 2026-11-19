@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F5D7B6C6-C13D-4B48-B472-E7854E5141E0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AutoMapPins</RootNamespace>
+    <AssemblyName>AutoMapPins</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <LangVersion>10</LangVersion>
+    <Nullable>enable</Nullable>
+    <PackageOutputDir Condition="'$(PackageOutputDir)' == ''">$(ProjectDir)artifacts</PackageOutputDir>
+    <Net48ReferenceAssembliesPath>$(MSBuildProjectDirectory)\packages\Microsoft.NETFramework.ReferenceAssemblies.net48.1.0.3\build\.NETFramework\v4.8</Net48ReferenceAssembliesPath>
+    <FrameworkPathOverride Condition="'$(FrameworkPathOverride)' == '' And Exists('$(Net48ReferenceAssembliesPath)\mscorlib.dll')">$(Net48ReferenceAssembliesPath)</FrameworkPathOverride>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <Choose>
+    <When Condition="($(OS) == 'Unix' OR $(OS) == 'OSX') AND $(GamePath) == ''">
+      <PropertyGroup>
+        <GamePath Condition="!Exists('$(GamePath)')">$(HOME)/.steam/steam/steamapps/common/Valheim</GamePath>
+        <GamePath Condition="!Exists('$(GamePath)')">$(HOME)/Library/Application Support/Steam/steamapps/common/Valheim/Contents/MacOS</GamePath>
+        <BepInExPath Condition="!Exists('$(BepInExPath)')AND Exists('$(GamePath)')">$(GamePath)/BepInEx</BepInExPath>
+        <CorlibPath Condition="!Exists('$(CorlibPath)')">$(GamePath)/unstripped_corelib</CorlibPath>
+        <PublicizedAssembliesPath Condition="!Exists('$(PublicizedAssembliesPath)') AND Exists('$(GamePath)')">$(GamePath)/valheim_Data/Managed/publicized_assemblies</PublicizedAssembliesPath>
+      </PropertyGroup>
+    </When>
+    <When Condition="($(OS) == 'Windows_NT') AND $(GamePath) == ''">
+      <PropertyGroup>
+        <GamePath Condition="!Exists('$(GamePath)')">$([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Steam App 892970', 'InstallLocation', null, RegistryView.Registry64, RegistryView.Registry32))</GamePath>
+        <_SteamLibraryPath>$([MSBuild]::GetRegistryValueFromView('HKEY_CURRENT_USER\SOFTWARE\Valve\Steam', 'SteamPath', null, RegistryView.Registry32))</_SteamLibraryPath>
+        <GamePath Condition="!Exists('$(GamePath)') AND '$(_SteamLibraryPath)' != ''">$(_SteamLibraryPath)\steamapps\common\Valheim</GamePath>
+        <GamePath Condition="!Exists('$(GamePath)') AND Exists('$(ValheimGamePath)')">$(ValheimGamePath)</GamePath>
+        <GamePath Condition="!Exists('$(GamePath)')">C:\Program Files\Steam\steamapps\common\Valheim</GamePath>
+        <GamePath Condition="!Exists('$(GamePath)')">C:\Program Files (x86)\Steam\steamapps\common\Valheim</GamePath>
+        <GamePath Condition="!Exists('$(GamePath)')">D:\SteamLibrary\steamapps\common\Valheim</GamePath>
+        <BepInExPath Condition="!Exists('$(BepInExPath)')AND Exists('$(GamePath)')">$(GamePath)\BepInEx</BepInExPath>
+        <ManagedPath Condition="!Exists('$(ManagedPath)') AND Exists('$(GamePath)')">$(GamePath)\valheim_Data\Managed</ManagedPath>
+        <PublicizedAssembliesPath Condition="!Exists('$(PublicizedAssembliesPath)') AND Exists('$(GamePath)')">$(GamePath)\valheim_Data\Managed\publicized_assemblies</PublicizedAssembliesPath>
+      </PropertyGroup>
+    </When>
+  </Choose>
+  <PropertyGroup Condition="'$(OS)' == 'Windows_NT' AND '$(GamePath)' != ''">
+    <BepInExPath Condition="'$(BepInExPath)' == '' AND Exists('$(GamePath)\BepInEx')">$(GamePath)\BepInEx</BepInExPath>
+    <ManagedPath Condition="'$(ManagedPath)' == '' AND Exists('$(GamePath)\valheim_Data\Managed')">$(GamePath)\valheim_Data\Managed</ManagedPath>
+    <PublicizedAssembliesPath Condition="'$(PublicizedAssembliesPath)' == '' AND Exists('$(GamePath)\valheim_Data\Managed\publicized_assemblies')">$(GamePath)\valheim_Data\Managed\publicized_assemblies</PublicizedAssembliesPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(OS)' == 'Windows_NT' AND $(GamePath) != ''">
+    <StartAction>Program</StartAction>
+    <StartProgram>$(GamePath)\valheim.exe</StartProgram>
+    <StartArguments>-console</StartArguments>
+    <StartWorkingDirectory>$(GamePath)</StartWorkingDirectory>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>$(BepInExPath)\core\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="assembly_guiutils">
+      <HintPath>$(ManagedPath)\assembly_guiutils.dll</HintPath>
+    </Reference>
+    <Reference Include="assembly_utils">
+      <HintPath>$(ManagedPath)\assembly_utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Splatform">
+      <HintPath>$(ManagedPath)\Splatform.dll</HintPath>
+    </Reference>
+    <Reference Include="assembly_valheim">
+      <HintPath>$(ManagedPath)\assembly_valheim.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>$(BepInExPath)\core\BepInEx.dll</HintPath>
+    </Reference>
+    <Reference Include="ServerSync">
+      <HintPath>libraries\ServerSync.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>$(ManagedPath)\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(ManagedPath)\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+
+    <Reference Include="UnityEngine.UI">
+      <HintPath>$(ManagedPath)\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>$(ManagedPath)\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>$(ManagedPath)\netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="YamlDotNet, Version=15.0.0.0, Culture=neutral, PublicKeyToken=ec19458f3c15af5e, processorArchitecture=MSIL">
+      <HintPath>packages\YamlDotNet.15.1.4\lib\net47\YamlDotNet.dll</HintPath>
+    </Reference>
+
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoMapPinsPlugin.cs" />
+    <Compile Include="Common\Constants.cs" />
+    <Compile Include="Common\HasLogger.cs" />
+    <Compile Include="Data\Config.cs" />
+    <Compile Include="Data\IconConfigStorage.cs" />
+    <Compile Include="Discovery\DiscoveryRadiusService.cs" />
+    <Compile Include="Discovery\ExplorationSkillGate.cs" />
+    <Compile Include="Discovery\LoadedObjectScanSummary.cs" />
+    <Compile Include="Discovery\LoadedObjectSceneScanner.cs" />
+    <Compile Include="Discovery\GeneratedZoneScanner.cs" />
+    <Compile Include="Discovery\GeneratedPinService.cs" />
+    <Compile Include="Discovery\GeneratedPinRequestPolicy.cs" />
+    <Compile Include="Discovery\GeneratedPinRequestLimiter.cs" />
+    <Compile Include="Discovery\GeneratedPinWireProtocol.cs" />
+    <Compile Include="Discovery\GeneratedPinResponseTracker.cs" />
+    <Compile Include="Discovery\GeneratedPinNetworkService.cs" />
+    <Compile Include="Icons\Assets.cs" />
+    <Compile Include="Icons\IconReloadThrottle.cs" />
+    <Compile Include="Icons\PickerIconOverrides.cs" />
+    <Compile Include="Icons\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MapPin.cs" />
+    <Compile Include="Model\PinComponent.cs" />
+    <Compile Include="Model\PositionedObject.cs" />
+    <Compile Include="Patches\AllCreatePinPatches.cs" />
+    <Compile Include="Patches\ConsolePatch.cs" />
+    <Compile Include="Patches\MinimapPatch.cs" />
+    <Compile Include="Patches\PickablePatch.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Data\Registry.cs" />
+    <Compile Include="Data\YamlFileStorage.cs" />
+    <Content Include="CHANGELOG.md" />
+    <Content Include="Icons\Making Icons.md" />
+    <Content Include="Icons\png\Axe.png" />
+    <Content Include="Icons\png\Axe48.png" />
+    <Content Include="Icons\png\Berry.png" />
+    <Content Include="Icons\png\Berry48.png" />
+    <Content Include="Icons\png\Bones.png" />
+    <Content Include="Icons\png\Bones48.png" />
+    <Content Include="Icons\png\Dot.png" />
+    <Content Include="Icons\png\Dot48.png" />
+    <Content Include="Icons\png\Dungeon.png" />
+    <Content Include="Icons\png\Dungeon48.png" />
+    <Content Include="Icons\png\Fire.png" />
+    <Content Include="Icons\png\Fire48.png" />
+    <Content Include="Icons\png\Flower.png" />
+    <Content Include="Icons\png\Flower48.png" />
+    <Content Include="Icons\png\Hand.png" />
+    <Content Include="Icons\png\Hand48.png" />
+    <Content Include="Icons\png\Hay.png" />
+    <Content Include="Icons\png\Hay48.png" />
+    <Content Include="Icons\png\Herb.png" />
+    <Content Include="Icons\png\Herb48.png" />
+    <Content Include="Icons\png\AMP.png" />
+    <Content Include="Icons\png\Island.png" />
+    <Content Include="Icons\png\Island48.png" />
+    <Content Include="Icons\png\Mine.png" />
+    <Content Include="Icons\png\Mine48.png" />
+    <Content Include="Icons\png\Monument.png" />
+    <Content Include="Icons\png\Monument48.png" />
+    <Content Include="Icons\png\Mushroom.png" />
+    <Content Include="Icons\png\Mushroom48.png" />
+    <Content Include="Icons\png\Portal.png" />
+    <Content Include="Icons\png\Portal48.png" />
+    <Content Include="Icons\png\Rune.png" />
+    <Content Include="Icons\png\Rune48.png" />
+    <Content Include="Icons\png\Seed.png" />
+    <Content Include="Icons\png\Seed48.png" />
+    <Content Include="Icons\png\Spawner.png" />
+    <Content Include="Icons\png\Spawner48.png" />
+    <Content Include="Icons\png\Temple.png" />
+    <Content Include="Icons\png\Temple48.png" />
+    <Content Include="Icons\png\Treasure.png" />
+    <Content Include="Icons\png\Treasure48.png" />
+    <Content Include="Icons\png\Tree.png" />
+    <Content Include="Icons\png\Tree48.png" />
+    <Content Include="Icons\png\Village.png" />
+    <Content Include="Icons\png\Village48.png" />
+    <Content Include="Icons\png\Whale.png" />
+    <Content Include="Icons\png\Whale48.png" />
+    <Content Include="ILRepack.targets" />
+    <Content Include="README.md" />
+    <Content Include="ThunderStorePackage\config\FixItFelix.AutoMapPins.categories.yaml" />
+    <Content Include="ThunderStorePackage\config\FixItFelix.AutoMapPins.icons.yaml" />
+    <Content Include="ThunderStorePackage\icon.png" />
+    <Content Include="ThunderStorePackage\manifest.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Icons\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="packages\Microsoft.NETFramework.ReferenceAssemblies.net48.1.0.3\build\Microsoft.NETFramework.ReferenceAssemblies.net48.targets" Condition="Exists('packages\Microsoft.NETFramework.ReferenceAssemblies.net48.1.0.3\build\Microsoft.NETFramework.ReferenceAssemblies.net48.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="ValidateBuildPaths" BeforeTargets="ResolveReferences">
+    <Error Text="GamePath is not set or does not exist. Set ValheimGamePath or pass /p:GamePath=&lt;path-to-Valheim&gt;." Condition="'$(GamePath)' == '' Or !Exists('$(GamePath)')" />
+    <Error Text="BepInEx.dll was not found. Install BepInEx in Valheim or pass /p:BepInExPath=&lt;path-to-BepInEx&gt;." Condition="'$(BepInExPath)' == '' Or !Exists('$(BepInExPath)\core\BepInEx.dll')" />
+    <Error Text="Valheim managed assemblies were not found. Pass /p:ManagedPath=&lt;path-to-valheim_Data\Managed&gt;." Condition="'$(ManagedPath)' == '' Or !Exists('$(ManagedPath)\assembly_valheim.dll')" />
+  </Target>
+  <Target Name="CopyOutputDLL" AfterTargets="ILRepacker" Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' And '$(DeployToGame)' == 'true' ">
+    <Error Text="DLL not found in target directory." Condition="!Exists('$(TargetDir)$(AssemblyName).dll')" />
+    <Error Text="DLL not found in target directory." Condition="!Exists('$(TargetDir)$(AssemblyName).pdb')" />
+    <Error Text="config not found in project directory." Condition="!Exists('$(ProjectDir)ThunderStorePackage\config\FixItFelix.AutoMapPins.categories.yaml')" />
+    <MakeDir Directories="$(BepInExPath)\plugins\$(AssemblyName)" Condition="!Exists('$(BepInExPath)\plugins\$(AssemblyName)')" />
+    <Exec Command="$(ProjectDir)libraries\debug\pdb2mdb.exe $(TargetDir)$(AssemblyName).dll" />
+    <Copy SourceFiles="$(ProjectDir)ThunderStorePackage\config\FixItFelix.AutoMapPins.categories.yaml" DestinationFolder="$(BepInExPath)\config\" OverwriteReadOnlyFiles="true" />
+    <Copy SourceFiles="$(TargetDir)$(AssemblyName).dll" DestinationFolder="$(BepInExPath)\plugins\$(AssemblyName)" OverwriteReadOnlyFiles="true" />
+    <Copy SourceFiles="$(TargetDir)$(AssemblyName).pdb" DestinationFolder="$(BepInExPath)\plugins\$(AssemblyName)" OverwriteReadOnlyFiles="true" />
+    <Copy SourceFiles="$(TargetDir)$(AssemblyName).dll.mdb" DestinationFolder="$(BepInExPath)\plugins\$(AssemblyName)" OverwriteReadOnlyFiles="true" />
+  </Target>
+  <Target Name="GetAssemblyVersion" AfterTargets="ILRepacker" Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' And '$(BuildThunderstorePackage)' == 'true' ">
+    <GetAssemblyIdentity AssemblyFiles="$(TargetPath)">
+      <Output TaskParameter="Assemblies" ItemName="Targets" />
+    </GetAssemblyIdentity>
+    <ItemGroup>
+      <AssemblyVersions Include="@(Targets->'%(Version)')" />
+    </ItemGroup>
+    <PropertyGroup>
+      <AssemblyVersion>%(AssemblyVersions.Identity)</AssemblyVersion>
+      <Major>$(AssemblyVersion.Split('.')[0])</Major>
+      <Minor>$(AssemblyVersion.Split('.')[1])</Minor>
+      <Patch>$(AssemblyVersion.Split('.')[2])</Patch>
+      <PackageName>$(AssemblyName)_v$(Major).$(Minor).$(Patch)</PackageName>
+      <PackageVersion>$(Major).$(Minor).$(Patch)</PackageVersion>
+      <VersionString>$(Major).$(Minor).$(Patch)</VersionString>
+      <PackageDir>Thunderstore\$(PackageName)</PackageDir>
+    </PropertyGroup>
+  </Target>
+  <Target Name="MakeThunderStorePackage" AfterTargets="GetAssemblyVersion" Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' And '$(BuildThunderstorePackage)' == 'true' ">
+    <MakeDir Directories="$(PackageOutputDir)" Condition="!Exists('$(PackageOutputDir)')" />
+    <!-- No shared staging, source manifest mutation, or replacement of an existing artifact. -->
+    <Exec Command="powershell.exe -NoProfile -ExecutionPolicy Bypass -File &quot;$(ProjectDir)scripts\New-ThunderstorePackage.ps1&quot; -ProjectRoot &quot;$(MSBuildProjectDirectory)&quot; -DllPath &quot;$(TargetPath)&quot; -OutputZip &quot;$(PackageOutputDir)\$(PackageName).zip&quot;" />
+  </Target>
+  <Import Project="packages\ILRepack.Lib.MSBuild.Task.2.0.32\build\ILRepack.Lib.MSBuild.Task.targets" Condition="Exists('packages\ILRepack.Lib.MSBuild.Task.2.0.32\build\ILRepack.Lib.MSBuild.Task.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105.The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\ILRepack.Lib.MSBuild.Task.2.0.32\build\ILRepack.Lib.MSBuild.Task.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\ILRepack.Lib.MSBuild.Task.2.0.32\build\ILRepack.Lib.MSBuild.Task.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.NETFramework.ReferenceAssemblies.net48.1.0.3\build\Microsoft.NETFramework.ReferenceAssemblies.net48.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.NETFramework.ReferenceAssemblies.net48.1.0.3\build\Microsoft.NETFramework.ReferenceAssemblies.net48.targets'))" />
+    <Error Condition="!Exists('packages\YamlDotNet.15.1.4\lib\net47\YamlDotNet.dll')" Text="$([System.String]::Format('$(ErrorText)', 'packages\YamlDotNet.15.1.4\lib\net47\YamlDotNet.dll'))" />
+  </Target>
+</Project>

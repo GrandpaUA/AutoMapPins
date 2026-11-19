@@ -1,0 +1,611 @@
+icons:
+
+# ============== РУДА ============== #
+
+    # Мідь
+    Ore_Copper:
+        file: "AutoMapPins/CartursIconsPack/ore_copper.png"
+        fallbackIcon: "mine48"
+        size: 100
+
+    # Олово
+    Ore_Tin:
+        file: "AutoMapPins/CartursIconsPack/ore_tin.png"
+        fallbackIcon: "mine48"
+        size: 100
+
+    # Слиз
+    Ore_Gucksack:
+    #   file: "AutoMapPins/CartursIconsPack/$$$$$.png"
+        fallbackIcon: "mine48"
+        size: 100
+
+    # Залізо
+    Ore_Iron:
+        file: "AutoMapPins/CartursIconsPack/ore_scrap_iron.png"
+        fallbackIcon: "mine48"
+        size: 100
+
+    # Обсидіан
+    Ore_Obsidian:
+        file: "AutoMapPins/CartursIconsPack/ore_generic.png"
+        fallbackIcon: "mine48"
+        size: 100
+
+    # Срібло
+    Ore_Silver:
+        file: "AutoMapPins/CartursIconsPack/ore_silver.png"
+        fallbackIcon: "mine48"
+        size: 100
+
+    # Смола
+    Ore_Tar:
+        file: "AutoMapPins/CartursIconsPack/spawner_tar_pit.png"
+        fallbackIcon: "mine48"
+        size: 125
+
+    # Прадавні обладунки
+    #Ore_GiantHelmet:
+    #    file: "AutoMapPins/CartursIconsPack/$$$$$.png"
+    #    fallbackIcon: "mine48"
+    #    size: 100
+
+    # Прадавній меч
+    Ore_GiantSword:
+        file: "AutoMapPins/CartursIconsPack/poi_giant_sword.png"
+        fallbackIcon: "mine48"
+        size: 100
+
+    # Скам'яніла кістка
+    Ore_Ribs:
+        file: "AutoMapPins/CartursIconsPack/poi_giant_skull.png"
+        fallbackIcon: "mine48"
+        size: 125
+
+    # М'які тканини
+    Ore_SoftTissue:
+        file: "AutoMapPins/CartursIconsPack/resource_soft_tissue.png"
+        fallbackIcon: "mine48"
+        size: 100
+
+    # Вогняний метал
+    Ore_Flametal:
+        file: "AutoMapPins/CartursIconsPack/ore_flametal.png"
+        fallbackIcon: "mine48"
+        size: 100
+
+    # Скам’янілий підстаркуватий троль
+    Ore_Troll:
+        file: "AutoMapPins/CartursIconsPack/poi_petrified_troll.png"
+        fallbackIcon: "mine48"
+        size: 100
+
+    # Кристал
+    Ore_Crystal:
+        file: "AutoMapPins/CartursIconsPack/ore_crystal.png"
+        fallbackIcon: "mine48"
+        size: 100
+
+# ================================== #
+
+# =========== ПІДЗЕМЕЛЛЯ =========== #
+
+    # Поховальні
+    Location_BurialChambers:
+        file: "AutoMapPins/CartursIconsPack/dungeon_burial_chamber.png"
+        fallbackIcon: "dungeon"
+        size: 125
+
+    # Трольська печера
+    Location_TrollCave:
+        file: "AutoMapPins/CartursIconsPack/dungeon_troll_cave.png"
+        fallbackIcon: "dungeon"
+        size: 125
+
+    # Ведмежий барліг
+    #Location_BearCave:
+    #    file: "AutoMapPins/CartursIconsPack/$$$$$.png"
+    #    fallbackIcon: "dungeon"
+    #    size: 125
+
+    # Затоплені склепи
+    Location_SunkenCrypts:
+        file: "AutoMapPins/CartursIconsPack/dungeon_sunken_crypt.png"
+        fallbackIcon: "dungeon"
+        size: 125
+
+    # Морозні печери
+    Location_MountainCave:
+        file: "AutoMapPins/CartursIconsPack/dungeon_mountain_cave.png"
+        fallbackIcon: "dungeon"
+        size: 125
+
+    # Заражена копальня
+    Location_InfestedMine:
+        file: "AutoMapPins/CartursIconsPack/dungeon_infested_mine.png"
+        fallbackIcon: "dungeon"
+        size: 125
+
+    # Смердючий отвір
+    Location_MorgenHole:
+        file: "AutoMapPins/CartursIconsPack/dungeon_putrid_hole.png"
+        fallbackIcon: "dungeon"
+        size: 125
+
+    # Обвуглена фортеця
+    Location_CharredFortress:
+        file: "AutoMapPins/CartursIconsPack/dungeon_charred_fortress.png"
+        fallbackIcon: "dungeon"
+        size: 125
+
+    # Вітряні тунелі
+    Location_TheHole:
+        file: "AutoMapPins/CartursIconsPack/spawner_morgen_hole.png"
+        fallbackIcon: "dungeon"
+        size: 125
+
+    # Мйоркгалла
+    Location_MorkBorg:
+        file: "AutoMapPins/CartursIconsPack/dungeon_morkhalla.png"
+        fallbackIcon: "dungeon"
+        size: 125
+
+    # Левіафан
+    Location_Leviathan:
+        file: "AutoMapPins/CartursIconsPack/poi_lavaiathan.png"
+        fallbackIcon: "whale"
+        size: 150
+
+    # Зотліла поховальня
+    Location_HildirCrypt:
+        file: "AutoMapPins/CartursIconsPack/dungeon_burial_chamber.png"
+        fallbackIcon: "dungeon"
+        size: 150
+
+    # Завивальна печера
+    Location_HildirCave:
+        file: "AutoMapPins/CartursIconsPack/dungeon_frost_cave.png"
+        fallbackIcon: "dungeon"
+        size: 150
+
+    # Запечатана вежа
+    Location_HildirFortress:
+        file: "AutoMapPins/CartursIconsPack/poi_stone_tower.png"
+        fallbackIcon: "monument"
+        size: 150
+
+# ================================== #
+
+# ============= ГРИБИ ============== #
+
+    # Червоний гриб
+    #Mushroom_Red:
+    #    file: "AutoMapPins/CartursIconsPack/$$$$$.png"
+    #    fallbackIcon: "mushroom48"
+    #    size: 100
+
+    # Жовтий гриб
+    Mushroom_Yellow:
+        file: "AutoMapPins/CartursIconsPack/mushroom_yellow.png"
+        fallbackIcon: "mushroom48"
+        size: 100
+
+    # Йотунські бульби
+    Mushroom_JotunPuffs:
+        file: "AutoMapPins/CartursIconsPack/mushroom_jotunpuff.png"
+        fallbackIcon: "mushroom48"
+        size: 100
+
+    # Чаклунський гриб
+    Mushroom_MageCap:
+        file: "AutoMapPins/CartursIconsPack/mushroom_magecap.png"
+        fallbackIcon: "mushroom48"
+        size: 100
+
+    # Порхавка
+    Mushroom_SmokePuff:
+        file: "AutoMapPins/CartursIconsPack/plant_smoke_puff.png"
+        fallbackIcon: "mushroom48"
+        size: 100
+
+# ================================== #
+
+# ============= ЯГОДИ ============== #
+
+    # Малина
+    Berry_RaspBerry:
+        file: "AutoMapPins/CartursIconsPack/plant_raspberry.png"
+        fallbackIcon: "berry48"
+        size: 100
+
+    # Чорниця
+    Berry_BlueBerry:
+        file: "AutoMapPins/CartursIconsPack/plant_blueberry.png"
+        fallbackIcon: "berry48"
+        size: 100
+
+    # Морошка
+    Berry_CloudBerry:
+        file: "AutoMapPins/CartursIconsPack/plant_cloudberry.png"
+        fallbackIcon: "berry48"
+        size: 100
+
+    # Попелиста лоза
+    Berry_VineAsh:
+        file: "AutoMapPins/CartursIconsPack/plant_vineberry.png"
+        fallbackIcon: "berry48"
+        size: 100
+
+    # Брусниця
+    Berry_LingonBerry:
+        file: "AutoMapPins/CartursIconsPack/plant_lingonberry.png"
+        fallbackIcon: "berry48"
+        size: 100
+
+# ================================== #
+
+# ============= НАСІННЯ ============ #
+
+    # Розторопша
+    Seed_Thistle:
+        file: "AutoMapPins/CartursIconsPack/plant_thistle.png"
+        fallbackIcon: "seed"
+        size: 100
+
+    # Морква
+    Seed_Carrot:
+        file: "AutoMapPins/CartursIconsPack/plant_carrot.png"
+        fallbackIcon: "seed"
+        size: 100
+
+    # Ріпа
+    Seed_Turnip:
+        file: "AutoMapPins/CartursIconsPack/plant_turnip.png"
+        fallbackIcon: "seed"
+        size: 100
+
+    # Кейл
+    Seed_Kale:
+    #   file: "AutoMapPins/CartursIconsPack/$$$$$.png"
+        fallbackIcon: "seed"
+        size: 100
+
+# ================================== #
+
+# ============= РОСЛИНИ ============ #
+
+    # Кульбаба
+    Plant_Dandelion:
+        file: "AutoMapPins/CartursIconsPack/plant_dandelion.png"
+        fallbackIcon: "flower48"
+        size: 100
+
+    # Дуб
+    Plant_Oak:
+    #   file: "AutoMapPins/CartursIconsPack/$$$$$.png"
+        fallbackIcon: "tree48"
+        size: 100
+
+    # Ячмінь
+    Plant_Barley:
+        file: "AutoMapPins/CartursIconsPack/plant_barley.png"
+        fallbackIcon: "hay48"
+        size: 100
+
+    # Льон
+    Plant_Flax:
+        file: "AutoMapPins/CartursIconsPack/plant_flax.png"
+        fallbackIcon: "hay48"
+        size: 100
+
+
+    # Прадавній корінь
+    Plant_YggdrasilRoot:
+        file: "AutoMapPins/CartursIconsPack/poi_ygg_root.png"
+        fallbackIcon: "herb48"
+        size: 125
+
+# ================================== #
+
+# ============= ОВОЧІ ============== #
+
+    # Папоротевий равлик
+    Veggi_FiddleHead:
+        file: "AutoMapPins/CartursIconsPack/plant_fiddlehead.png"
+        fallbackIcon: "hay48"
+        size: 100
+
+# ================================== #
+
+# ============== СКАРБ ============= #
+
+    Treasure:
+        file: "AutoMapPins/CartursIconsPack/util_chest.png"
+        fallbackIcon: "treasure48"
+        size: 100
+
+# ================================== #
+
+# ============ СПАВНЕРИ ============ #
+
+    # Гніздо сіролюдів
+    Spawner_Greydwarf:
+        file: "AutoMapPins/CartursIconsPack/spawner_greydwarf_nest.png"
+        fallbackIcon: "spawner48"
+        size: 100
+
+    # Зловісна купа кісток
+    Spawner_BonePile:
+        file: "AutoMapPins/CartursIconsPack/spawner_skeleton_bones.png"
+        fallbackIcon: "spawner48"
+        size: 100
+
+    # Купа тіл
+    Spawner_DraugrPile:
+        file: "AutoMapPins/CartursIconsPack/spawner_draugr_grave.png"
+        fallbackIcon: "spawner48"
+        size: 100
+
+    # Вогневики
+    Spawner_FireHole:
+        file: "AutoMapPins/CartursIconsPack/spawner_surtling_firehole.png"
+        fallbackIcon: "spawner48"
+        size: 150
+
+    # Гніздо драконів
+    Spawner_DrakeNest:
+        file: "AutoMapPins/CartursIconsPack/spawner_drake_nest.png"
+        fallbackIcon: "spawner48"
+        size: 150
+
+    # Гніздо вулкальників
+    Spawner_VoltureNest:
+        file: "AutoMapPins/CartursIconsPack/spawner_volture_nest.png"
+        fallbackIcon: "spawner48"
+        size: 100
+
+    # Обвуглений прикликач
+    Spawner_CharredStone:
+        file: "AutoMapPins/CartursIconsPack/spawner_charred_stone.png"
+        fallbackIcon: "spawner48"
+        size: 125
+
+    # Злостиве опудало
+    Spawner_CharredCross:
+    #   file: "AutoMapPins/CartursIconsPack/spawner_pentagram.png"
+        fallbackIcon: "spawner48"
+        size: 110
+
+    # ~ БОСИ ~ #
+
+    # Ейктюр
+    Spawner_Eikthyr:
+        file: "AutoMapPins/CartursIconsPack/boss_eikthyr.png"
+        fallbackIcon: "rune48"
+        size: 150
+
+    # Прадавній
+    Spawner_GDKing:
+        file: "AutoMapPins/CartursIconsPack/boss_elder.png"
+        fallbackIcon: "rune48"
+        size: 150
+
+    # Кістянка
+    Spawner_BoneMass:
+        file: "AutoMapPins/CartursIconsPack/boss_bonemass.png"
+        fallbackIcon: "rune48"
+        size: 150
+
+    # Мати
+    Spawner_DragonQueen:
+        file: "AutoMapPins/CartursIconsPack/boss_moder.png"
+        fallbackIcon: "rune48"
+        size: 150
+
+    # Яґлут
+    Spawner_GoblinKing:
+        file: "AutoMapPins/CartursIconsPack/boss_yagluth.png"
+        fallbackIcon: "rune48"
+        size: 150
+
+    # Королева
+    Spawner_Queen:
+        file: "AutoMapPins/CartursIconsPack/boss_queen.png"
+        fallbackIcon: "rune48"
+        size: 150
+
+    # Батько
+    Spawner_Fader:
+        file: "AutoMapPins/CartursIconsPack/boss_fader.png"
+        fallbackIcon: "rune48"
+        size: 150
+
+    # Калл Зимовісник
+    Spawner_FrozenKing:
+        file: "AutoMapPins/CartursIconsPack/boss_kall.png"
+        fallbackIcon: "rune48"
+        size: 150
+
+    # Лорд Рето
+    Location_Dyrnwyn:
+        file: "AutoMapPins/CartursIconsPack/npc_lord_reto.png"
+        fallbackIcon: "rune48"
+        size: 150
+
+# ================================== #
+
+# ========== СЕЛА / ТАБОРИ ========= #
+
+    # Левади
+    Camp_Draugrs:
+        file: "AutoMapPins/CartursIconsPack/poi_meadows_village.png"
+        fallbackIcon: "temple48"
+        size: 200
+
+    # Рівнини
+    Camp_Goblins:
+        file: "AutoMapPins/CartursIconsPack/poi_fuling_village.png"
+        fallbackIcon: "temple48"
+        size: 200
+
+    # Імлисті землі ~ Розкопки
+    Camp_DvergrsExcavation:
+        file: "AutoMapPins/CartursIconsPack/dungeon_dvergr_excavation.png"
+        fallbackIcon: "temple48"
+        size: 200
+
+    # Імлисті землі ~ Вежа
+    Camp_DvergrsTower:
+        file: "AutoMapPins/CartursIconsPack/dungeon_dvergr_tower.png"
+        fallbackIcon: "temple48"
+        size: 200
+
+    # Імлисті землі ~ Причал
+    Camp_DvergrsHarbour:
+        file: "AutoMapPins/CartursIconsPack/poi_dock.png"
+        fallbackIcon: "temple48"
+        size: 175
+
+    # Попелисті землі
+    Camp_DvergrsAsh:
+    #   file: "AutoMapPins/CartursIconsPack/$$$$$.png"
+        fallbackIcon: "temple48"
+        size: 150
+
+    # Далека північ
+    Camp_NorthVillage:
+        file: "AutoMapPins/CartursIconsPack/poi_deepnorth_village.png"
+        fallbackIcon: "temple48"
+        size: 200
+
+    # Прадавній жертовник
+    Camp_MemorialPlace:
+        file: "AutoMapPins/CartursIconsPack/poi_stone_circle.png"
+        fallbackIcon: "temple48"
+        size: 200
+
+# ================================== #
+
+# ============== РІЗНЕ ============= #
+
+    # Дикий вулик
+    Misk_Beehive:
+        file: "AutoMapPins/CartursIconsPack/resource_honeycomb.png"
+        fallbackIcon: "hand48"
+        size: 100
+
+    # Йольське дерево
+    Misk_YuleTree:
+        file: "AutoMapPins/CartursIconsPack/poi_maypole.png"
+        fallbackIcon: "hand48"
+        size: 150
+
+    # Брила
+    Misk_StoneRock:
+    #   file: "AutoMapPins/CartursIconsPack/$$$$$.png"
+        fallbackIcon: "hand48"
+        size: 100
+
+    # Корабельна аварія
+    Misk_ShipWreck:
+        file: "AutoMapPins/CartursIconsPack/poi_shipwreck.png"
+        fallbackIcon: "axe48"
+        size: 100
+
+# ================================== #
+
+# ========== ЛОРНІ КАМЕНІ ========== #
+
+    Boar_Stone:
+        file: "AutoMapPins/CartursIconsPack/spawner_boar_runestone.png"
+        fallbackIcon: "rune48"
+        size: 125
+
+    Rune_Stone:
+        file: "AutoMapPins/CartursIconsPack/poi_runestone.png"
+        fallbackIcon: "rune48"
+        size: 125
+
+# =========== ВЕГВІЗІРИ ============ #
+
+    Vegvísir:
+        file: "AutoMapPins/CartursIconsPack/poi_vegvisir.png"
+        fallbackIcon: "rune48"
+        size: 125
+
+# ================================== #
+
+vanillaOverrides:
+
+    # Полум'я
+    Icon0:
+        file: "AutoMapPins/CartursIconsPack/util_campfire.png"
+        size: 125
+
+    # База (Будинок)
+    Icon1:
+        file: "AutoMapPins/CartursIconsPack/poi_log_cabin.png"
+        size: 150
+
+    # Мітка (Якір)
+    #Icon2:
+    #    file: "AutoMapPins/CartursIconsPack/$$$$$.png"
+    #    size: 100
+
+    # Крапка
+    Icon3:
+        file: "AutoMapPins/CartursIconsPack/util_blank_pin.png"
+        size: 75
+
+    # Портал
+    Icon4:
+        file: "AutoMapPins/CartursIconsPack/poi_portal.png"
+        size: 150
+
+    # Ліжко
+    Bed:
+        file: "AutoMapPins/CartursIconsPack/util_base_bed.png"
+        size: 150
+
+    # Іконка Боса
+    #Boss:
+    #   file: "AutoMapPins/CartursIconsPack/$$$$$.png"
+    #   size: 125
+
+    # Іконка смерті
+    Death:
+        file: "AutoMapPins/CartursIconsPack/util_death.png"
+        size: 150
+
+    # Жертвенні камені (Стартова локація)
+    StartTemple:
+        file: "AutoMapPins/CartursIconsPack/poi_sacrificial_stones.png"
+        size: 100
+
+    # Хальдор
+    Vendor_BlackForest:
+        file: "AutoMapPins/CartursIconsPack/npc_haldor.png"
+        size: 125
+
+    # Хільдір
+    Hildir_camp:
+        file: "AutoMapPins/CartursIconsPack/npc_hildir.png"
+        size: 125
+
+    # Болотна відьма
+    BogWitch_Camp:
+        file: "AutoMapPins/CartursIconsPack/npc_bog_witch.png"
+        size: 125
+
+    # Ковальня можливостей
+    #AncientUpgradeStation:
+    #    file: "AutoMapPins/CartursIconsPack/$$$$$.png"
+    #    size: 125
+
+    #EventArea:   - # Іконка арени нападу на базу
+    #RandomEvent: - # Іконка ! при нападі на базу
+    #Hildir1:     - # Іконка ? ~ Зотліла поховальня
+    #Hildir2:     - # Іконка ? ~ Завивальна печера
+    #Hildir3:     - # Іконка ? ~ Запечатана вежа
+    #Ping:        - # Іконка Ping (СКМ)
+    #Shout:       - # Іконка при вході на сервер $text_player_arrived

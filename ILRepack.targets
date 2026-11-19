@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Target Name="ILRepacker" AfterTargets="Build">
+        <ItemGroup>
+            <InputAssemblies Include="$(TargetPath)" />
+            <InputAssemblies Include="$(OutputPath)\ServerSync.dll" />
+            <InputAssemblies Include="$(OutputPath)\YamlDotNet.dll" />
+        </ItemGroup>
+        <ILRepack Parallel="true" DebugInfo="true" Internalize="true" InputAssemblies="@(InputAssemblies)" OutputFile="$(TargetPath)" TargetKind="SameAsPrimaryAssembly" LibraryPath="$(OutputPath)" />
+    </Target>
+
+    <Target Name="ValidateServerSyncCompatibility"
+            AfterTargets="ILRepacker"
+            BeforeTargets="CopyOutputDLL;GetAssemblyVersion;UpdateManifestVersion;MakeThunderStorePackage">
+        <PropertyGroup>
+            <_ServerSyncCecilPath Condition="'$(_ServerSyncCecilPath)' == '' And Exists('$(TargetDir)Mono.Cecil.dll')">$(TargetDir)Mono.Cecil.dll</_ServerSyncCecilPath>
+            <_ServerSyncCecilPath Condition="'$(_ServerSyncCecilPath)' == '' And Exists('$(BepInExPath)\core\Mono.Cecil.dll')">$(BepInExPath)\core\Mono.Cecil.dll</_ServerSyncCecilPath>
+            <_ServerSyncCecilPath Condition="'$(_ServerSyncCecilPath)' == '' And Exists('$(ProjectDir)bin\$(Configuration)\Mono.Cecil.dll')">$(ProjectDir)bin\$(Configuration)\Mono.Cecil.dll</_ServerSyncCecilPath>
+            <_ServerSyncCecilPath Condition="'$(_ServerSyncCecilPath)' == '' And Exists('$(ProjectDir)bin\Release\Mono.Cecil.dll')">$(ProjectDir)bin\Release\Mono.Cecil.dll</_ServerSyncCecilPath>
+        </PropertyGroup>
+        <Error Text="scripts\Test-ServerSyncCompatibility.ps1 not found." Condition="!Exists('$(ProjectDir)scripts\Test-ServerSyncCompatibility.ps1')" />
+        <Error Text="assembly_valheim.dll was not found. Pass /p:ManagedPath=&lt;path-to-valheim_Data\Managed&gt;." Condition="'$(ManagedPath)' == '' Or !Exists('$(ManagedPath)\assembly_valheim.dll')" />
+        <Error Text="Mono.Cecil.dll was not found in TargetDir, BepInEx core, or bin\$(Configuration)/bin\Release." Condition="'$(_ServerSyncCecilPath)' == '' Or !Exists('$(_ServerSyncCecilPath)')" />
+        <Exec Command="powershell.exe -NoProfile -ExecutionPolicy Bypass -File &quot;$(ProjectDir)scripts\Test-ServerSyncCompatibility.ps1&quot; -AssemblyPath &quot;$(TargetPath)&quot; -ValheimAssemblyPath &quot;$(ManagedPath)\assembly_valheim.dll&quot; -CecilPath &quot;$(_ServerSyncCecilPath)&quot;" />
+    </Target>
+</Project>

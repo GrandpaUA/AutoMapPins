@@ -1,0 +1,26 @@
+name: Source checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  regressions:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-dotnet@0f4a354dd5547a28c70b7853dbd95d5b67886e73 # v6.1.0
+        with:
+          dotnet-version: 8.0.x
+      - name: Restore build dependencies
+        shell: powershell
+        run: ./scripts/restore-packages.ps1
+      - name: Gameplay regressions (production sources with runtime stubs)
+        shell: powershell
+        run: ./scripts/Run-BoundedGameplayFixTests.ps1
+      - name: Icon regressions (production sources with runtime stubs)
+        shell: powershell
+        run: ./scripts/Run-IconAssetTests.ps1
+      - name: Check whitespace
+        run: git diff --check

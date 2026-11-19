@@ -1,0 +1,1863 @@
+# Wiki локацій
+# https://valheim-modding.github.io/Jotunn/data/zones/location-list.html
+
+# ============== РУДА ============== #
+
+# Мідь
+Ore_Copper:
+    categoryConfiguredObjects:
+        - rock4_copper
+        - rock4_copper_frac
+    name: $item_copper
+    isPermanent:    false
+    isActive:       true
+    skillRequire:   20
+    groupable:      true
+    iconName:       Ore_Copper
+    iconColorRGBA:
+        red:        200
+        green:      110
+        blue:       55
+        alpha:      255
+
+# Олово
+Ore_Tin:
+    categoryConfiguredObjects:
+        - MineRock_Tin
+    name: $item_tin
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   20
+    groupable:      true
+    iconName:       Ore_Tin
+    iconColorRGBA:
+        red:        225
+        green:      255
+        blue:       255
+        alpha:      255
+
+# Слиз
+Ore_Gucksack:
+    categoryConfiguredObjects:
+        - GuckSack
+        - GuckSack_small
+    name: $item_guck
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   20
+    groupable:      true
+    iconName:       Ore_Gucksack
+    iconColorRGBA:
+        red:        100
+        green:      215
+        blue:       0
+        alpha:      255
+
+# Купа брухту
+Ore_Iron:
+    categoryConfiguredObjects:
+        - mudpile_beacon
+        - mudpile_frac
+    name: $item_iron
+    isPermanent:    false
+    isActive:       true
+    skillRequire:   50
+    groupable:      true
+    iconName:       Ore_Iron
+    iconColorRGBA:
+        red:        230
+        green:      230
+        blue:       230
+        alpha:      255
+
+# Обсидіан
+Ore_Obsidian:
+    categoryConfiguredObjects:
+        - MineRock_Obsidian
+    name: $item_obsidian
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   20
+    groupable:      true
+    iconName:       Ore_Obsidian
+    iconColorRGBA:
+        red:        255
+        green:      255
+        blue:       225
+        alpha:      255
+
+# Срібло
+Ore_Silver:
+    categoryConfiguredObjects:
+        - silvervein
+        - silvervein_frac
+    name: $item_silver
+    isPermanent:    false
+    isActive:       true
+    skillRequire:   75
+    groupable:      true
+    iconName:       Ore_Silver
+    iconColorRGBA:
+        red:        240
+        green:      240
+        blue:       225
+        alpha:      255
+
+# Смола
+Ore_Tar:
+    categoryConfiguredObjects:
+        - TarPit1
+        - TarPit1_1
+        - TarPit2
+        - TarPit2_1
+        - TarPit3
+        - TarPit3_1
+    name: $item_tar
+    isActive:       true
+    isPermanent:    true
+    skillRequire:   20
+    iconName:       Ore_Tar
+    iconColorRGBA:
+        red:        255
+        green:      235
+        blue:       150
+        alpha:      255
+
+# Прадавні обладунки
+Ore_GiantHelmet:
+    categoryConfiguredObjects:
+        - giant_helmet1
+        - giant_helmet1_destruction
+        - giant_helmet2
+        - giant_helmet2_destruction
+    name: $piece_giant_helmet
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   40
+    groupable:      true
+    iconName:       Ore_GiantSword
+    iconColorRGBA:
+        red:        255
+        green:      150
+        blue:       50
+        alpha:      255
+
+# Прадавній меч
+Ore_GiantSword:
+    categoryConfiguredObjects:
+        - giant_sword1
+        - giant_sword1_destruction
+        - giant_sword2
+        - giant_sword2_destruction
+        - Mistlands_Swords3
+    name: $piece_giant_sword
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   40
+    groupable:      true
+    iconName:       Ore_GiantSword
+    iconColorRGBA:
+        red:        255
+        green:      150
+        blue:       50
+        alpha:      255
+
+# Скам'яніла кістка
+Ore_Ribs:
+    categoryConfiguredObjects:
+        - giant_ribs
+        - giant_ribs_frac
+        - giant_skull
+        - giant_skull_frac
+        - Mistlands_Giant2
+    name: $piece_giant_bone
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   40
+    groupable:      true
+    iconName:       Ore_Ribs
+    iconColorRGBA:
+        red:        255
+        green:      255
+        blue:       210
+        alpha:      255
+
+# М'які тканини
+Ore_SoftTissue:
+    categoryConfiguredObjects:
+        - giant_brain
+        - giant_brain_frac
+    name: $item_softtissue
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   60
+    groupable:      true
+    iconName:       Ore_SoftTissue
+    iconColorRGBA:
+        red:        255
+        green:      180
+        blue:       50
+        alpha:      255
+
+# Вогняний метал
+Ore_Flametal:
+    categoryConfiguredObjects:
+        - LeviathanLava
+    name: $item_flametal
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   30
+    groupable:      true
+    iconName:       Ore_Flametal
+    iconColorRGBA:
+        red:        245
+        green:      245
+        blue:       240
+        alpha:      255
+
+# Скам’янілий підстаркуватий троль
+Ore_Troll:
+    categoryConfiguredObjects:
+        - TrollFrost_Dead
+        - TrollFrost_Frac
+        - TrollFrost_Frac_arm
+        - TrollFrost_Frac_legs
+    name: $enemy_troll
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   30
+    groupable:      true
+    iconName:       Ore_Troll
+    iconColorRGBA:
+        red:        230
+        green:      230
+        blue:       250
+        alpha:      255
+
+# ~ Smoothbrain Jewelcrafting ~ #
+
+# Родовище кристалів
+Ore_Crystal:
+    categoryConfiguredObjects:
+        - Raw_Black_Gemstone
+        - Raw_Blue_Gemstone
+        - Raw_Cyan_Gemstone
+        - Raw_Green_Gemstone
+        - Raw_Orange_Gemstone
+        - Raw_Purple_Gemstone
+        - Raw_Red_Gemstone
+        - Raw_White_Gemstone
+        - Raw_Yellow_Gemstone
+    name: $item_crystal
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   25
+    groupable:      true
+    iconName:       Ore_Crystal
+    iconColorRGBA:
+        red:        175
+        green:      240
+        blue:       240
+        alpha:      255
+
+# ================================== #
+
+# =========== ПІДЗЕМЕЛЛЯ =========== #
+
+# Поховальні
+Location_BurialChambers:
+    categoryConfiguredObjects:
+        - Crypt2
+        - Crypt3
+        - Crypt4
+    name: $location_forestcrypt
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   20
+    groupable:      true
+    iconName:       Location_BurialChambers
+    iconColorRGBA:
+        red:        250
+        green:      235
+        blue:       215
+        alpha:      255
+
+# Трольська печера
+Location_TrollCave:
+    categoryConfiguredObjects:
+        - TrollCave02
+    name: $location_forestcave
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   20
+    groupable:      true
+    iconName:       Location_TrollCave
+    iconColorRGBA:
+        red:        240
+        green:      255
+        blue:       240
+        alpha:      255
+
+# Ведмежий барліг
+Location_BearCave:
+    categoryConfiguredObjects:
+        - BearCave
+    name: $location_bearcave
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   20
+    groupable:      true
+    iconName:       Location_TrollCave
+    iconColorRGBA:
+        red:        245
+        green:      220
+        blue:       180
+        alpha:      255
+
+# Затоплені склепи
+Location_SunkenCrypts:
+    categoryConfiguredObjects:
+        - SunkenCrypt4
+    name: $location_sunkencrypt
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   20
+    groupable:      true
+    iconName:       Location_SunkenCrypts
+    iconColorRGBA:
+        red:        200
+        green:      240
+        blue:       200
+        alpha:      255
+
+# Морозні печери
+Location_MountainCave:
+    categoryConfiguredObjects:
+        - MountainCave02
+    name: $location_mountaincave
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   20
+    groupable:      true
+    iconName:       Location_MountainCave
+    iconColorRGBA:
+        red:        200
+        green:      225
+        blue:       255
+        alpha:      255
+
+# Заражена копальня
+Location_InfestedMine:
+    categoryConfiguredObjects:
+        - Mistlands_DvergrTownEntrance1
+        - Mistlands_DvergrTownEntrance2
+    name: $location_dvergrtown
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   50
+    groupable:      true
+    iconName:       Location_InfestedMine
+    iconColorRGBA:
+        red:        245
+        green:      220
+        blue:       180
+        alpha:      255
+
+# Смердючий отвір
+Location_MorgenHole:
+    categoryConfiguredObjects:
+        - MorgenHole1
+        - MorgenHole2
+        - MorgenHole3
+    name: $location_morgenhole
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   40
+    groupable:      true
+    iconName:       Location_MorgenHole
+    iconColorRGBA:
+        red:        200
+        green:      180
+        blue:       150
+        alpha:      255
+
+# Обвуглена фортеця
+Location_CharredFortress:
+    categoryConfiguredObjects:
+        - CharredFortress
+    name: $charredfortress
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   20
+    groupable:      true
+    iconName:       Location_CharredFortress
+    iconColorRGBA:
+        red:        75
+        green:      255
+        blue:       75
+        alpha:      255
+
+# Вітряні тунелі
+Location_TheHole:
+    categoryConfiguredObjects:
+        - TheHole01
+    name: $location_thehole
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   60
+    groupable:      true
+    iconName:       Location_TheHole
+    iconColorRGBA:
+        red:        220
+        green:      185
+        blue:       135
+        alpha:      255
+
+# Мйоркгалла
+Location_MorkBorg:
+    categoryConfiguredObjects:
+        - MorkBorg
+    name: $location_morkhalla
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   20
+    groupable:      true
+    iconName:       Location_MorkBorg
+    iconColorRGBA:
+        red:        255
+        green:      245
+        blue:       145
+        alpha:      255
+
+# Левіафан
+Location_Leviathan:
+    categoryConfiguredObjects:
+        - Leviathan
+    name: $item_chitin
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   30
+    groupable:      true
+    iconName:       Location_Leviathan
+    iconColorRGBA:
+        red:        200
+        green:      250
+        blue:       255
+        alpha:      255
+
+# Зотліла поховальня
+Location_HildirCrypt:
+    categoryConfiguredObjects:
+        - Hildir_crypt
+    name: $hud_pin_hildir1
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   30
+    groupable:      true
+    iconName:       Location_HildirCrypt
+    iconColorRGBA:
+        red:        255
+        green:      70
+        blue:       0
+        alpha:      255
+
+# Завивальна печера
+Location_HildirCave:
+    categoryConfiguredObjects:
+        - Hildir_cave
+    name: $hud_pin_hildir2
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   30
+    groupable:      true
+    iconName:       Location_HildirCave
+    iconColorRGBA:
+        red:        30
+        green:      150
+        blue:       255
+        alpha:      255
+
+# Запечатана вежа
+Location_HildirFortress:
+    categoryConfiguredObjects:
+        - Hildir_plainsfortress
+    name: $hud_pin_hildir3
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   30
+    groupable:      true
+    iconName:       Location_HildirFortress
+    iconColorRGBA:
+        red:        200
+        green:      255
+        blue:       100
+        alpha:      255
+
+# Лорд Рето
+Location_Dyrnwyn:
+    categoryConfiguredObjects:
+        - PlaceofMystery3
+    name: $location_mausoleum
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   50
+    groupable:      true
+    iconName:       Location_Dyrnwyn
+    iconColorRGBA:
+        red:        255
+        green:      255
+        blue:       255
+        alpha:      255
+
+# ~ Smoothbrain Jewelcrafting ~ #
+
+# Кришталева печера
+Location_CrystalCave:
+    categoryConfiguredObjects:
+        - JC_Crystal_Cave
+    name: $jc_crystal_cave
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   20
+    groupable:      true
+    iconName:       Location_InfestedMine
+    iconColorRGBA:
+        red:        175
+        green:      240
+        blue:       240
+        alpha:      255
+
+# Містичний Cамоцвіт
+Location_GachaLocation:
+    categoryConfiguredObjects:
+        - JC_Gacha_Location
+    name: $jc_gacha_gemstone
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   20
+    groupable:      true
+    iconName:       Ore_Crystal
+    iconColorRGBA:
+        red:        175
+        green:      240
+        blue:       240
+        alpha:      255
+
+# ================================== #
+
+# ============= ГРИБИ ============== #
+
+# Червоний гриб
+Mushroom_Red:
+    categoryConfiguredObjects:
+        - Pickable_Mushroom
+    name: $item_mushroomcommon
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   10
+    groupable:      true
+    iconName:       Mushroom_Yellow
+    iconColorRGBA:
+        red:        255
+        green:      50
+        blue:       50
+        alpha:      255
+
+# Жовтий гриб
+Mushroom_Yellow:
+    categoryConfiguredObjects:
+        - Pickable_Mushroom_yellow
+    name: $item_mushroomyellow
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   10
+    groupable:      true
+    iconName:       Mushroom_Yellow
+    iconColorRGBA:
+        red:        230
+        green:      210
+        blue:       0
+        alpha:      255
+
+# Йотунські бульби
+Mushroom_JotunPuffs:
+    categoryConfiguredObjects:
+        - Pickable_Mushroom_JotunPuffs
+    name: $item_jotunpuffs
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   10
+    groupable:      true
+    iconName:       Mushroom_JotunPuffs
+    iconColorRGBA:
+        red:        255
+        green:      245
+        blue:       125
+        alpha:      255
+
+# Чаклунський гриб
+Mushroom_MageCap:
+    categoryConfiguredObjects:
+        - Pickable_Mushroom_Magecap
+    name: $item_magecap
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   10
+    groupable:      true
+    iconName:       Mushroom_MageCap
+    iconColorRGBA:
+        red:        120
+        green:      165
+        blue:       235
+        alpha:      255
+
+# Порхавка
+Mushroom_SmokePuff:
+    categoryConfiguredObjects:
+        - Pickable_SmokePuff
+    name: $item_smokepuff
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   10
+    groupable:      true
+    iconName:       Mushroom_SmokePuff
+    iconColorRGBA:
+        red:        255
+        green:      200
+        blue:       50
+        alpha:      255
+
+# ~ Therzie Wizardry ~ #
+
+# Відьомське око
+Mushroom_WitchEye:
+    categoryConfiguredObjects:
+        - Pickable_Mushroom_Witcheye_TW
+    name: $consume_witcheye_TW
+    isPermanent:    false
+    isActive:       true
+    skillRequire:   10
+    groupable:      true
+    iconName:       Mushroom_MageCap
+    iconColorRGBA:
+        red:        130
+        green:      110
+        blue:       200
+        alpha:      255
+
+# Смертельний ковпачок
+Mushroom_DeathCap:
+    categoryConfiguredObjects:
+        - Pickable_Mushroom_Deathcap_TW
+    name: $consume_deathcap_TW
+    isPermanent:    false
+    isActive:       true
+    skillRequire:   10
+    groupable:      true
+    iconName:       Mushroom_MageCap
+    iconColorRGBA:
+        red:        80
+        green:      185
+        blue:       100
+        alpha:      255
+
+# Чаклунське масло
+Mushroom_WizardButter:
+    categoryConfiguredObjects:
+        - Pickable_Mushroom_Wizardbutter_TW
+    name: $consume_wizardbutter_TW
+    isPermanent:    false
+    isActive:       true
+    skillRequire:   10
+    groupable:      true
+    iconName:       Mushroom_MageCap
+    iconColorRGBA:
+        red:        225
+        green:      100
+        blue:       255
+        alpha:      255
+
+# Язик диявола
+Mushroom_DevilsTongue:
+    categoryConfiguredObjects:
+        - Pickable_Mushroom_Devilstongue_TW
+    name: $consume_devilstongue_TW
+    isPermanent:    false
+    isActive:       true
+    skillRequire:   10
+    groupable:      true
+    iconName:       Mushroom_MageCap
+    iconColorRGBA:
+        red:        255
+        green:      250
+        blue:       205
+        alpha:      255
+
+# ================================== #
+
+# ============= ЯГОДИ ============== #
+
+# Малина
+Berry_RaspBerry:
+    categoryConfiguredObjects:
+        - RaspberryBush
+    name: $item_raspberries
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   10
+    groupable:      true
+    iconName:       Berry_RaspBerry
+    iconColorRGBA:
+        red:        220
+        green:      20
+        blue:       60
+        alpha:      255
+
+# Чорниця
+Berry_BlueBerry:
+    categoryConfiguredObjects:
+        - BlueberryBush
+    name: $item_blueberries
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   10
+    groupable:      true
+    iconName:       Berry_BlueBerry
+    iconColorRGBA:
+        red:        0
+        green:      125
+        blue:       180
+        alpha:      255
+
+# Морошка
+Berry_CloudBerry:
+    categoryConfiguredObjects:
+        - CloudberryBush
+    name: $item_cloudberries
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   10
+    groupable:      true
+    iconName:       Berry_CloudBerry
+    iconColorRGBA:
+        red:        245
+        green:      210
+        blue:       115
+        alpha:      255
+
+# Попелиста лоза
+Berry_VineAsh:
+    categoryConfiguredObjects:
+        - VineAsh
+    name: $piece_sapling_vineash
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   10
+    groupable:      true
+    iconName:       Berry_VineAsh
+    iconColorRGBA:
+        red:        200
+        green:      255
+        blue:       175
+        alpha:      255
+
+# Брусниця
+Berry_LingonBerry:
+    categoryConfiguredObjects:
+        - LingonberryBush
+    name: $item_lingonberries
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   10
+    groupable:      true
+    iconName:       Berry_LingonBerry
+    iconColorRGBA:
+        red:        255
+        green:      70
+        blue:       0
+        alpha:      255
+
+# ================================== #
+
+# ============= НАСІННЯ ============ #
+
+# Розторопша
+Seed_Thistle:
+    categoryConfiguredObjects:
+        - Pickable_Thistle
+    name: $item_thistle
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   10
+    groupable:      true
+    iconName:       Seed_Thistle
+    iconColorRGBA:
+        red:        0
+        green:      215
+        blue:       225
+        alpha:      255
+
+# Морква
+Seed_Carrot:
+    categoryConfiguredObjects:
+        - Pickable_SeedCarrot
+    name: $item_carrot
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   10
+    groupable:      true
+    iconName:       Seed_Carrot
+    iconColorRGBA:
+        red:        200
+        green:      90
+        blue:       0
+        alpha:      255
+
+# Ріпа
+Seed_Turnip:
+    categoryConfiguredObjects:
+        - Pickable_SeedTurnip
+    name: $item_turnip
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   10
+    groupable:      true
+    iconName:       Seed_Turnip
+    iconColorRGBA:
+        red:        180
+        green:      130
+        blue:       170
+        alpha:      255
+
+# Кейл
+Seed_Kale:
+    categoryConfiguredObjects:
+        - Pickable_SeedKale
+    name: $item_kale
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   10
+    groupable:      true
+    iconName:       Seed_Kale
+    iconColorRGBA:
+        red:        175
+        green:      255
+        blue:       50
+        alpha:      255
+
+# ================================== #
+
+# ============= РОСЛИНИ ============ #
+
+# Кульбаба
+Plant_Dandelion:
+    categoryConfiguredObjects:
+        - Pickable_Dandelion
+    name: $item_dandelion
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   5
+    groupable:      true
+    iconName:       Plant_Dandelion
+    iconColorRGBA:
+        red:        255
+        green:      255
+        blue:       0
+        alpha:      255
+
+# Дуб
+Plant_Oak:
+    categoryConfiguredObjects:
+        - Oak1
+    name: $prop_oak
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   5
+    groupable:      true
+    iconName:       Plant_Oak
+    iconColorRGBA:
+        red:        50
+        green:      255
+        blue:       50
+        alpha:      255
+
+# Ячмінь
+Plant_Barley:
+    categoryConfiguredObjects:
+        - Pickable_Barley_Wild
+    name: $item_barley
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   10
+    groupable:      true
+    iconName:       Plant_Barley
+    iconColorRGBA:
+        red:        255
+        green:      250
+        blue:       130
+        alpha:      255
+
+# Льон
+Plant_Flax:
+    categoryConfiguredObjects:
+        - Pickable_Flax_Wild
+    name: $item_flax
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   10
+    groupable:      true
+    iconName:       Plant_Flax
+    iconColorRGBA:
+        red:        180
+        green:      160
+        blue:       50
+        alpha:      255
+
+# Прадавній корінь
+Plant_YggdrasilRoot:
+    categoryConfiguredObjects:
+        - YggdrasilRoot
+    name: $prop_ancienttreeroot
+    isPermanent:    false
+    isActive:       true
+    skillRequire:   25
+    groupable:      true
+    iconName:       Plant_YggdrasilRoot
+    iconColorRGBA:
+        red:        120
+        green:      200
+        blue:       55
+        alpha:      255
+
+# ================================== #
+
+# ============= ОВОЧІ ============== #
+
+# Папоротевий равлик
+Veggi_FiddleHead:
+    categoryConfiguredObjects:
+        - Pickable_Fiddlehead
+    name: $item_fiddleheadfern
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   10
+    groupable:      true
+    iconName:       Veggi_FiddleHead
+    iconColorRGBA:
+        red:        240
+        green:      115
+        blue:       200
+        alpha:      255
+
+# ================================== #
+
+# ============== СКАРБ ============= #
+
+Treasure:
+    categoryConfiguredObjects:
+        - loot_deepNorth_Granary
+        - loot_deepNorth_TimberHall
+        - Pickable_DvergrMineTreasure
+        - TreasureChest_ashland_stone
+        - TreasureChest_blackforest
+        - TreasureChest_charredfortress
+        - TreasureChest_dvergrtower
+        - TreasureChest_dvergrtown
+        - TreasureChest_fCrypt
+        - TreasureChest_forestcrypt
+        - TreasureChest_forestcrypt_hildir
+        - TreasureChest_heath
+        - TreasureChest_heath_hildir
+        - TreasureChest_meadows
+        - TreasureChest_morkhalla
+        - TreasureChest_mountaincave
+        - TreasureChest_mountaincave_hildir
+        - TreasureChest_mountains
+        - TreasureChest_plains_stone
+        - TreasureChest_plainsfortress_hildir
+        - TreasureChest_sunkencrypt
+        - TreasureChest_swamp
+        - TreasureChest_trollcave
+    isPermanent:    false
+    isActive:       true
+    skillRequire:   45
+    groupable:      true
+    iconName:       Treasure
+    iconColorRGBA:
+        red:        255
+        green:      210
+        blue:       0
+        alpha:      255
+
+Treasure_Wishbone:
+    categoryConfiguredObjects:
+        - Pickable_DolmenTreasure
+        - Pickable_MorkHallaTreasure
+        - Pickable_MountainRemains01_buried
+        - TreasureChest_deepnorth_village
+        - TreasureChest_dvergr_loose_stone
+        - TreasureChest_meadows_01
+        - TreasureChest_meadows_02
+        - TreasureChest_meadows_buried
+        - TreasureChest_meadows_combat
+        - TreasureChest_memorial_buried
+    isPermanent:    false
+    isActive:       true
+    skillRequire:   75
+    groupable:      true
+    iconName:       Treasure
+    iconColorRGBA:
+        red:        255
+        green:      210
+        blue:       0
+        alpha:      255
+
+# ================================== #
+
+# ============ СПАВНЕРИ ============ #
+
+# Гніздо сіролюдів
+Spawner_Greydwarf:
+    categoryConfiguredObjects:
+        - Spawner_GreydwarfNest
+    name: $enemy_greydwarfspawner
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   25
+    groupable:      true
+    iconName:       Spawner_Greydwarf
+    iconColorRGBA:
+        red:        255
+        green:      100
+        blue:       0
+        alpha:      255
+
+# Зловісна купа кісток
+Spawner_BonePile:
+    categoryConfiguredObjects:
+        - BonePileSpawner
+        - BonePileSpawner_swamp
+    name: $enemy_skeletonspawner
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   25
+    groupable:      true
+    iconName:       Spawner_BonePile
+    iconColorRGBA:
+        red:        255
+        green:      100
+        blue:       0
+        alpha:      255
+
+# Купа тіл
+Spawner_DraugrPile:
+    categoryConfiguredObjects:
+        - Spawner_DraugrPile
+    name: $enemy_draugrspawner
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   25
+    groupable:      true
+    iconName:       Spawner_DraugrPile
+    iconColorRGBA:
+        red:        255
+        green:      100
+        blue:       0
+        alpha:      255
+
+# Вогневики
+Spawner_FireHole:
+    categoryConfiguredObjects:
+        - FireHole
+    name: $enemy_surtling
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   25
+    groupable:      true
+    iconName:       Spawner_FireHole
+    iconColorRGBA:
+        red:        255
+        green:      50
+        blue:       0
+        alpha:      255
+
+# Гніздо драконів
+Spawner_DrakeNest:
+    categoryConfiguredObjects:
+        - DrakeNest01
+    name: $enemy_drake
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   35
+    groupable:      true
+    iconName:       Spawner_DrakeNest
+    iconColorRGBA:
+        red:        205
+        green:      0
+        blue:       0
+        alpha:      255
+
+# Гніздо вулкальників
+Spawner_VoltureNest:
+    categoryConfiguredObjects:
+        - VoltureNest
+    name: $enemy_volture
+    isPermanent:    true
+    isActive:       false
+    skillRequire:   25
+    groupable:      true
+    iconName:       Spawner_VoltureNest
+    iconColorRGBA:
+        red:        100
+        green:      225
+        blue:       225
+        alpha:      255
+
+# Обвуглений прикликач
+Spawner_CharredStone:
+    categoryConfiguredObjects:
+        - Spawner_CharredStone
+    name: $enemy_charredtwitcherspawner
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   25
+    groupable:      true
+    iconName:       Spawner_CharredStone
+    iconColorRGBA:
+        red:        100
+        green:      225
+        blue:       225
+        alpha:      255
+
+# Злостиве опудало
+Spawner_CharredCross:
+    categoryConfiguredObjects:
+        - Spawner_CharredCross
+    name: $enemy_charredspawnercross
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   25
+    groupable:      true
+    iconName:       Spawner_CharredCross
+    iconColorRGBA:
+        red:        240
+        green:      25
+        blue:       230
+        alpha:      255
+
+# Обвуглений прикликач (Елітний)
+Spawner_CharredCrossElite:
+    categoryConfiguredObjects:
+        - Spawner_CharredStone_Elite
+    name: $enemy_charredtwitcherspawner
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   35
+    groupable:      true
+    iconName:       Spawner_CharredCross
+    iconColorRGBA:
+        red:        240
+        green:      25
+        blue:       230
+        alpha:      255
+
+# ~ БОСИ ~ #
+
+# Ейктюр
+Spawner_Eikthyr:
+    categoryConfiguredObjects:
+        - Eikthyrnir
+    name: $enemy_eikthyr
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   25
+    groupable:      true
+    iconName:       Spawner_Eikthyr
+    iconColorRGBA:
+        red:        255
+        green:      245
+        blue:       185
+        alpha:      255
+
+# Прадавній
+Spawner_GDKing:
+    categoryConfiguredObjects:
+        - GDKing
+    name: $enemy_gdking
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   25
+    groupable:      true
+    iconName:       Spawner_GDKing
+    iconColorRGBA:
+        red:        155
+        green:      255
+        blue:       155
+        alpha:      255
+
+# Кістянка
+Spawner_BoneMass:
+    categoryConfiguredObjects:
+        - Bonemass
+    name: $enemy_bonemass
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   25
+    groupable:      true
+    iconName:       Spawner_BoneMass
+    iconColorRGBA:
+        red:        130
+        green:      255
+        blue:       210
+        alpha:      255
+
+# Мати
+Spawner_DragonQueen:
+    categoryConfiguredObjects:
+        - Dragonqueen
+    name: $enemy_dragon
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   25
+    groupable:      true
+    iconName:       Spawner_DragonQueen
+    iconColorRGBA:
+        red:        0
+        green:      245
+        blue:       255
+        alpha:      255
+
+# Яґлут
+Spawner_GoblinKing:
+    categoryConfiguredObjects:
+        - GoblinKing
+    name: $enemy_goblinking
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   25
+    groupable:      true
+    iconName:       Spawner_GoblinKing
+    iconColorRGBA:
+        red:        255
+        green:      50
+        blue:       50
+        alpha:      255
+
+# Королева
+Spawner_Queen:
+    categoryConfiguredObjects:
+        - Mistlands_DvergrBossEntrance1
+    name: $enemy_seekerqueen
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   25
+    groupable:      true
+    iconName:       Spawner_Queen
+    iconColorRGBA:
+        red:        215
+        green:      0
+        blue:       215
+        alpha:      255
+
+# Батько
+Spawner_Fader:
+    categoryConfiguredObjects:
+        - FaderLocation
+    name: $enemy_fader
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   25
+    groupable:      true
+    iconName:       Spawner_Fader
+    iconColorRGBA:
+        red:        255
+        green:      20
+        blue:       150
+        alpha:      255
+
+# Калл Зимовісник
+Spawner_FrozenKing:
+    categoryConfiguredObjects:
+        - DN_Bossroom
+    name: $enemy_frozenking
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   25
+    groupable:      true
+    iconName:       Spawner_FrozenKing
+    iconColorRGBA:
+        red:        0
+        green:      190
+        blue:       255
+        alpha:      255
+
+# ~ Therzie Monstrum ~ #
+
+# Асмодей
+Spawner_Asmodeus:
+    categoryConfiguredObjects:
+        - AltarAsmodeus_TW
+    # name: $boss_asmodeus_TW
+    isPermanent:    false
+    isActive:       true
+    skillRequire:   25
+    groupable:      true
+    iconName:       rune48
+    iconColorRGBA:
+        red:        200
+        green:      0
+        blue:       0
+        alpha:      255
+
+# Свельт
+Spawner_Svalt:
+    categoryConfiguredObjects:
+        - AltarSvalt_TW
+    # name: $boss_svalt_TW
+    isPermanent:    false
+    isActive:       true
+    skillRequire:   25
+    groupable:      true
+    iconName:       rune48
+    iconColorRGBA:
+        red:        200
+        green:      0
+        blue:       0
+        alpha:      255
+
+# Вриколатас
+Spawner_Vrykolathas:
+    categoryConfiguredObjects:
+        - AltarVrykolathas_TW
+    # name: $boss_vrykolathas_TW
+    isPermanent:    false
+    isActive:       true
+    skillRequire:   25
+    groupable:      true
+    iconName:       rune48
+    iconColorRGBA:
+        red:        200
+        green:      0
+        blue:       0
+        alpha:      255
+
+# ================================== #
+
+# ========== СЕЛА / ТАБОРИ ========= #
+
+# Левади
+Camp_Draugrs:
+    categoryConfiguredObjects:
+        - WoodVillage1
+        - WoodVillage2
+    # name: $enemy_draugr
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   25
+    groupable:      true
+    iconName:       Camp_Draugrs
+    iconColorRGBA:
+        red:        255
+        green:      255
+        blue:       255
+        alpha:      255
+
+# Рівнини
+Camp_Goblins:
+    categoryConfiguredObjects:
+        - GoblinCamp2
+        - GoblinCamp2_1
+    # name: $enemy_goblin
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   25
+    groupable:      true
+    iconName:       Camp_Goblins
+    iconColorRGBA:
+        red:        255
+        green:      255
+        blue:       255
+        alpha:      255
+
+# Імлисті землі ~ Розкопки
+Camp_DvergrsExcavation:
+    categoryConfiguredObjects:
+        - Mistlands_Excavation1
+        - Mistlands_Excavation2
+    # name: $enemy_dvergrs
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   25
+    groupable:      true
+    iconName:       Camp_DvergrsExcavation
+    iconColorRGBA:
+        red:        255
+        green:      255
+        blue:       255
+        alpha:      255
+
+# Імлисті землі ~ Вежа
+Camp_DvergrsTower:
+    categoryConfiguredObjects:
+        - Mistlands_GuardTower1_new
+        - Mistlands_GuardTower2_new
+        - Mistlands_GuardTower3_new
+        - Mistlands_Lighthouse1_new
+    # name: $enemy_dvergrs
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   25
+    groupable:      true
+    iconName:       Camp_DvergrsTower
+    iconColorRGBA:
+        red:        255
+        green:      255
+        blue:       255
+        alpha:      255
+
+# Імлисті землі ~ Причал
+Camp_DvergrsHarbour:
+    categoryConfiguredObjects:
+        - Mistlands_Harbour1
+    # name: $enemy_dvergrs
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   25
+    groupable:      true
+    iconName:       Camp_DvergrsHarbour
+    iconColorRGBA:
+        red:        255
+        green:      255
+        blue:       255
+        alpha:      255
+
+# Попелисті землі
+Camp_DvergrsAsh:
+    categoryConfiguredObjects:
+        - CharredTowerRuins1_dvergr
+    # name: $enemy_dvergrs
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   25
+    groupable:      true
+    iconName:       Camp_DvergrsAsh
+    iconColorRGBA:
+        red:        255
+        green:      255
+        blue:       255
+        alpha:      255
+
+# Далека північ
+Camp_NorthVillage:
+    categoryConfiguredObjects:
+        - NorthVillage
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   25
+    groupable:      true
+    iconName:       Camp_NorthVillage
+    iconColorRGBA:
+        red:        255
+        green:      255
+        blue:       255
+        alpha:      255
+
+# Прадавній жертовник
+Camp_MemorialPlace:
+    categoryConfiguredObjects:
+        - NorthMemorialPlace
+    name: $piece_offerbowl_memorial
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   40
+    groupable:      true
+    iconName:       Camp_MemorialPlace
+    iconColorRGBA:
+        red:        255
+        green:      255
+        blue:       255
+        alpha:      255
+
+# ================================== #
+
+# ============== РІЗНЕ ============= #
+
+# Дикий вулик
+Misk_Beehive:
+    categoryConfiguredObjects:
+        - Beehive
+    name: $piece_beehive
+    isPermanent:    false
+    isActive:       true
+    skillRequire:   30
+    groupable:      true
+    iconName:       Misk_Beehive
+    iconColorRGBA:
+        red:        255
+        green:      210
+        blue:       100
+        alpha:      255
+
+# Йольське дерево
+Misk_YuleTree:
+    categoryConfiguredObjects:
+        - piece_maypole
+    name: $piece_yuletree
+    isPermanent:    false
+    isActive:       true
+    skillRequire:   50
+    groupable:      true
+    iconName:       Misk_YuleTree
+    iconColorRGBA:
+        red:        200
+        green:      205
+        blue:       155
+        alpha:      255
+
+# Брила
+Misk_StoneRock:
+    categoryConfiguredObjects:
+        - Pickable_StoneRock
+    name: $item_stonerock
+    isPermanent:    true
+    isActive:       true
+    skillRequire:   90
+    groupable:      true
+    iconName:       Misk_StoneRock
+    iconColorRGBA:
+        red:        160
+        green:      160
+        blue:       170
+        alpha:      255
+
+# Корабельна аварія
+Misk_ShipWreck:
+    categoryConfiguredObjects:
+        - ShipWreck01
+        - ShipWreck01_DN
+        - ShipWreck02
+        - ShipWreck02_DN
+        - ShipWreck03
+        - ShipWreck04
+    isPermanent:    false
+    isActive:       true
+    skillRequire:   25
+    groupable:      true
+    iconName:       Misk_ShipWreck
+    iconColorRGBA:
+        red:        255
+        green:      255
+        blue:       255
+        alpha:      255
+
+
+# ================================== #
+
+# ========== ЛОРНІ КАМЕНІ ========== #
+
+Boar_Stone:
+    categoryConfiguredObjects:
+        - Runestone_Boars
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   15
+    groupable:      true
+    iconName:       Boar_Stone
+    iconColorRGBA:
+        red:        255
+        green:      70
+        blue:       0
+        alpha:      255
+
+Rune_Stone:
+    categoryConfiguredObjects:
+        - DrakeLorestone
+        - Runestone_Ashlands
+        - Runestone_BlackForest
+        - Runestone_DeepNorth
+        - Runestone_Draugr
+        - Runestone_Greydwarfs
+        - Runestone_Meadows
+        - Runestone_Mistlands
+        - Runestone_Mountains
+        - Runestone_Plains
+        - Runestone_Swamps
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   15
+    groupable:      true
+    iconName:       Rune_Stone
+    iconColorRGBA:
+        red:        255
+        green:      70
+        blue:       0
+        alpha:      255
+
+# =========== ВЕГВІЗІРИ ============ #
+
+# ~ Therzie Monstrum ~ #
+
+# Асмодей
+Vegvisir_Asmodeus:
+    categoryConfiguredObjects:
+        - Vegvisir_location_Asmodeus_TW
+    #name: $boss_asmodeus_TW
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   20
+    groupable:      true
+    iconName:       Vegvísir
+    iconColorRGBA:
+        red:        255
+        green:      70
+        blue:       0
+        alpha:      255
+
+# Свельт
+Vegvisir_Svalt:
+    categoryConfiguredObjects:
+        - Vegvisir_location_Svalt_TW
+    #name: $boss_svalt_TW
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   20
+    groupable:      true
+    iconName:       Vegvísir
+    iconColorRGBA:
+        red:        255
+        green:      70
+        blue:       0
+        alpha:      255
+
+# Вриколатас
+Vegvisir_Vrykolathas:
+    categoryConfiguredObjects:
+        - Vegvisir_location_Vrykolathas_TW
+    #name: $boss_vrykolathas_TW
+    isPermanent:    false
+    isActive:       false
+    skillRequire:   20
+    groupable:      true
+    iconName:       Vegvísir
+    iconColorRGBA:
+        red:        255
+        green:      70
+        blue:       0
+        alpha:      255
+
+# ================================== #
+
+#Pickables:
+#    categoryConfiguredObjects:
+#        - Pickable_Ashstone
+#        - Pickable_Branch
+#        - Pickable_Charredskull
+#        - Pickable_DvergrLantern
+#        - Pickable_DvergrStein
+#        - Pickable_Flint
+#        - Pickable_ForestCryptRemains01
+#        - Pickable_ForestCryptRemains02
+#        - Pickable_ForestCryptRemains03
+#        - Pickable_ForestCryptRemains04
+#        - Pickable_MoltenCoreStand
+#        - Pickable_Pot_Shard
+#        - Pickable_Stone
+#        - Pickable_SulfurRock
+#        - Pickable_Swordpiece1
+#        - Pickable_Swordpiece2
+#        - Pickable_Swordpiece3
+#        - Pickable_Tar
+#        - Pickable_TarBig
+#    isPermanent:    false
+#    isActive:       false
+#    groupable:      true
+#    iconName:       hand48
+#    iconColorRGBA:
+#        red:        255
+#        green:      255
+#        blue:       255
+#        alpha:      255
+
+#Environment:
+#    categoryConfiguredObjects:
+#        - AbandonedLogCabin02
+#        - AbandonedLogCabin03
+#        - AbandonedLogCabin04
+#        - AshCrow
+#        - AshlandRuins
+#        - Ashlands_floor_large
+#        - Ashlands_Fortress_Wall_Pillar
+#        - Ashlands_Fortress_Wall_Pillar_base
+#        - Ashlands_Fortress_Wall_PillarTop
+#        - Ashlands_Fortress_Wall_PillarTopStone
+#        - Ashlands_rock2
+#        - Ashlands_Ruins_Wall_4x6
+#        - Ashlands_Ruins_Wall_Windows_Broken_4x6
+#        - Ashlands_WallBlock
+#        - AshlandsBranch1
+#        - AshlandsBranch2
+#        - AshlandsBranch3
+#        - AshlandsBush1
+#        - barrell
+#        - Beech_small1
+#        - Beech_small2
+#        - blackmarble_post01
+#        - Bush01
+#        - Bush01_heath
+#        - Bush02_en
+#        - caverock_ice_stalagmite
+#        - caverock_ice_stalagtite
+#        - Charred_altar_bellfragment
+#        - CharredRuins1
+#        - CharredRuins2
+#        - CharredRuins3
+#        - CharredRuins4
+#        - CharredTowerRuins1
+#        - CharredTowerRuins2
+#        - CharredTowerRuins3
+#        - cliff_ashlands2
+#        - cliff_ashlands3_Arch_1
+#        - cliff_ashlands4
+#        - cliff_ashlands5
+#        - cliff_ashlands6
+#        - cliff_ashlands7_HalfArch
+#        - cliff_mistlands1
+#        - cliff_mistlands2
+#        - CreepProp_hanging01
+#        - Crow
+#        - Dolmen01
+#        - Dolmen02
+#        - Dolmen03
+#        - dvergrprops_barrel
+#        - dvergrtown_wood_beam
+#        - dvergrtown_wood_support
+#        - FernAshlands
+#        - FirTree_oldLog
+#        - FirTree_small
+#        - FirTree_small_dead
+#        - FortressRuins
+#        - goblin_strawpile
+#        - goblin_totempole
+#        - goblin_trashpile
+#        - Grave1
+#        - GraveStone_Broken_CharredTwitcherNest
+#        - GraveStone_Broken_World
+#        - GraveStone_CharredTwitcherNest
+#        - Greydwarf_camp1
+#        - Greydwarf_Root
+#        - HeathRockPillar
+#        - highstone
+#        - highstone_frac
+#        - ice1
+#        - ice_rock1
+#        - InfestedTree01
+#        - marker01
+#        - marker02
+#        - Mistlands_Giant1
+#        - Mistlands_GuardTower1_ruined_new
+#        - Mistlands_GuardTower1_ruined_new2
+#        - Mistlands_GuardTower3_ruined_new
+#        - Mistlands_RoadPost1
+#        - Mistlands_RockSpire1
+#        - Mistlands_Statue1
+#        - Mistlands_Statue2
+#        - Mistlands_StatueGroup1
+#        - Mistlands_Viaduct1
+#        - Mistlands_Viaduct2
+#        - MountainGrave01
+#        - MountainGraveStone01
+#        - MountainKit_brazier_blue
+#        - MountainWell1
+#        - Player_tombstone
+#        - rock1_mountain
+#        - rock2_heath
+#        - rock2_mountain
+#        - rock3_ice
+#        - rock3_mountain
+#        - rock4_coast
+#        - rock4_forest
+#        - rock4_heath
+#        - Rock_3
+#        - Rock_4
+#        - Rock_4_plains
+#        - Rock_7
+#        - rock_mistlands1
+#        - RockDolmen_1
+#        - RockDolmen_2
+#        - RockDolmen_3
+#        - RockFinger
+#        - RockFingerBroken
+#        - RockThumb
+#        - Ruin1
+#        - Ruin2
+#        - Ruin3
+#        - Seagal
+#        - ShipSetting01
+#        - ShipWreck01
+#        - ShipWreck02
+#        - ShipWreck03
+#        - shipwreck_karve_chest
+#        - shrub_2
+#        - shrub_2_heath
+#        - StoneCircle
+#        - StoneHenge1
+#        - StoneHenge2
+#        - StoneHenge5
+#        - StoneHenge6
+#        - StoneHouse3
+#        - StoneHouse4
+#        - StoneTower1
+#        - StoneTower3
+#        - StoneTowerRuins03
+#        - StoneTowerRuins04
+#        - StoneTowerRuins05
+#        - StoneTowerRuins07
+#        - StoneTowerRuins08
+#        - StoneTowerRuins09
+#        - StoneTowerRuins10
+#        - stubbe
+#        - SulfurArch
+#        - SwampHut1
+#        - SwampHut2
+#        - SwampHut3
+#        - SwampHut4
+#        - SwampHut5
+#        - SwampRuin1
+#        - SwampRuin2
+#        - SwampWell1
+#        - trader_wagon_destructable
+#        - TreasureChest_blackforest
+#        - TreasureChest_charredfortress
+#        - TreasureChest_heath
+#        - TreasureChest_plains_stone
+#        - UnstableLavaRock
+#        - volture_strawpile
+#        - Waymarker01
+#        - Waymarker02
+#        - widestone
+#        - widestone_frac
+#        - WoodFarm1
+#        - WoodHouse1
+#        - WoodHouse10
+#        - WoodHouse11
+#        - WoodHouse12
+#        - WoodHouse13
+#        - WoodHouse2
+#        - WoodHouse3
+#        - WoodHouse4
+#        - WoodHouse5
+#        - WoodHouse6
+#        - WoodHouse7
+#        - WoodHouse8
+#        - WoodHouse9
+#        - WoodVillage1
+#        - YggaShoot_small1
+#    isPermanent:    false
+#    isActive:       false
+#    groupable:      true
+#    iconName:       herb48
+#    iconColorRGBA:
+#        red:        255
+#        green:      255
+#        blue:       255
+#        alpha:      255

@@ -1,0 +1,7 @@
+# Individual disable precedence
+
+Run `python scripts/Run-IndividualDisableTests.py`. [Runner](<../scripts/Run-IndividualDisableTests.py>) executes full bounded source suite and two isolated regression programs in fresh output directories. [Original](<IndividualDisableOverrideTests.cs>) reproduces bulk category list incorrectly reactivating an individually disabled object; [lifecycle](<IndividualDisableLifecycleTests.cs>) checks hot disable, repeated reload, permanent cleanup, known-ID retention, unaffected sibling, re-enable, overlay removal and another category.
+
+Rule: explicit individual `isActive:false` suppresses that category's bulk membership for the same ID. It does NOT globally blacklist the ID across other active categories. Removing that override restores category inheritance. Explicit disabling removes existing AMP permanent pins under existing policy; back up game saves before destructive in-game acceptance tests.
+
+Actual-source/stub evidence does not establish Unity or native save serialization. Future authorized tester check: backed-up world; discover temporary and permanent target with sibling control; add individual-disable overlay without removing bulk membership; target markers disappear, sibling stays; reload twice; remove overlay, visible target returns without duplicates. Restore original config/save for rollback. Capture version, YAML, BepInEx log and before/after map screenshots. Do not send current audit-only same-version DLL.

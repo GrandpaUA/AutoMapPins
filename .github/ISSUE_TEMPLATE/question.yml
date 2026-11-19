@@ -1,0 +1,25 @@
+name: Question or configuration help
+description: Ask about installation, YAML, icons, skills, or compatibility.
+title: "[Question]: "
+labels: [question]
+body:
+  - type: markdown
+    attributes:
+      value: "English and Ukrainian are welcome. Search existing issues and check the README first."
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: Explain what you want to achieve and what you have already tried.
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: Include AutoMapPins and Valheim versions when relevant.
+  - type: textarea
+    id: context
+    attributes:
+      label: Relevant configuration or screenshots
+      description: Include relevant YAML and mods if needed. Remove private information from attachments.
