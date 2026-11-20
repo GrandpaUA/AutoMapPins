@@ -20,7 +20,7 @@ namespace AutoMapPins
     public class AutoMapPinsPlugin : BaseUnityPlugin
     {
         internal const string ModName = "AutoMapPins";
-        internal const string ModVersion = "2.3.17";
+        internal const string ModVersion = "2.3.18";
         private const string ModAuthor = "FixItFelix";
         private const string ModGuid = ModAuthor + "." + ModName;
         private const string ConfigFileName = ModGuid + ".cfg";

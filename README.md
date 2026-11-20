@@ -19,6 +19,12 @@ AutoMapPins adds pins for ore deposits, dungeons, chests, wild beehives, and oth
 
 ![AutoMapPins: custom chest and beehive icons on the map](https://github.com/GrandpaUA/AutoMapPins/blob/main/docs/images/map-pins-in-game.png?raw=true)
 
+![Black Forest map pins](https://raw.githubusercontent.com/GrandpaUA/AutoMapPins/main/docs/images/black-forest.png)
+
+![Swamp map pins](https://raw.githubusercontent.com/GrandpaUA/AutoMapPins/main/docs/images/swamp-icons.png)
+
+[Gallery / Галерея](https://github.com/GrandpaUA/AutoMapPins/blob/main/docs/SCREENSHOTS.md).
+
 ## Installation
 
 Install with a Valheim mod manager, or copy the package's `plugins` and `config` folders into `BepInEx`.

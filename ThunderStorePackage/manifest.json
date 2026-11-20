@@ -1,6 +1,6 @@
 {
   "name": "AutoMapPins",
-  "version_number": "2.3.17",
+  "version_number": "2.3.18",
   "website_url": "https://github.com/GrandpaUA/AutoMapPins",
   "description": "Automatically mark resources and locations on Valheim's map and minimap. Custom icons, category settings, temporary or saved pins.",
   "dependencies": [

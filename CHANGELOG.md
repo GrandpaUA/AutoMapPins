@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.3.18 — release candidate
+
+- Add five new in-game screenshots and a gallery covering Meadows, Black Forest, Swamp and Plains map markers.
+- Update GitHub and Thunderstore previews, retaining separate detailed and short descriptions.
+- Bump DLL and package version for the updated upload. Gameplay behavior and default configuration are unchanged.
+
 ## 2.3.17 — unreleased candidate
 
 - Replace the package logo with the supplied map-and-location-pin design in CraftSort's brown/yellow palette; retain a high-resolution master.

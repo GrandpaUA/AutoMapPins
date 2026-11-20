@@ -2,7 +2,7 @@
 
 ## Current status
 
-The current source version is **2.3.17**, a release candidate. It is not a verified stable release. The last documented tester delivery was **2.3.16**. A successful build or CI result does not replace testing the exact candidate in Valheim.
+The current source version is **2.3.18**, a release candidate. It is not a verified stable release. The last documented tester delivery was **2.3.16**. A successful build or CI result does not replace testing the exact candidate in Valheim.
 
 ## Candidate checks
 

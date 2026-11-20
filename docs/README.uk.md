@@ -19,6 +19,12 @@ AutoMapPins додає позначки родовищ руди, підземе�
 
 ![AutoMapPins: кастомні іконки скринь і вулика на мапі](https://github.com/GrandpaUA/AutoMapPins/blob/main/docs/images/map-pins-in-game.png?raw=true)
 
+![Black Forest map pins](https://raw.githubusercontent.com/GrandpaUA/AutoMapPins/main/docs/images/black-forest.png)
+
+![Swamp map pins](https://raw.githubusercontent.com/GrandpaUA/AutoMapPins/main/docs/images/swamp-icons.png)
+
+[Gallery / Галерея](https://github.com/GrandpaUA/AutoMapPins/blob/main/docs/SCREENSHOTS.md).
+
 ## Установлення
 
 Установи мод через менеджер модів Valheim або скопіюй папки `plugins` і `config` із пакета до `BepInEx`.
